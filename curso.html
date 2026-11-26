@@ -3,73 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conheça a GHS - Cursos e suas páginas de cursos, professores e contatos.">
+    <meta name="description" content="Conheça as páginas da GHS - Cursos.">
     <link rel="icon" href="img/escola.png" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
     <title>GHS - Cursos</title>
 </head>
 <body>
     <!-- Cabeçalho e menu -->
-    <header class="header">
-        <div class="conteudo header-conteudo">
-            <a class="logo" href="index.html">GHS - Cursos</a>
-            <button class="menu-botao" id="btn-menu" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">☰</button>
-            <nav class="nav" id="nav" aria-label="Menu principal">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="curso.html" class="ativo" aria-current="page">Cursos</a></li>
-                    <li><a href="professores.html">Professores</a></li>
-                    <li><a href="contatos.html">Contatos</a></li>
-                </ul>
-            </nav>
+    <div class="topo">
+        <header class="header">
+            <div class="conteudo header_conteudo">
+                <a class="logo" href="index.html">GHS - Cursos</a>
+                <button class="menu_botao" id="btn-menu" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">☰</button>
+                <nav class="nav" id="nav" aria-label="Menu principal">
+                    <ul class="menu">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="curso.html" class="select" aria-current="page">Cursos</a></li>
+                        <li><a href="professores.html">Professores</a></li>
+                        <li><a href="contatos.html">Contatos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="topo_texto conteudo">
+            <h1>Conheça nossos cursos</h1>
+            <p>Aprenda mais sobre tecnologia e programação.</p>
         </div>
-    </header>
+    </div>
 
     <main>
 
-        <div class="conteudo pagina">
-            <h1 class="titulo-pagina">Nossos Cursos</h1>
-            <p class="introducao">Conheça os cursos de tecnologia e escolha a área que mais combina com você.</p>
-
-            <!-- Imagem de destaque dos cursos -->
-            <img class="banner-cursos" src="img/01.jpg" alt="Imagem ilustrativa de cursos de informática">
-
-            <h2 class="titulo-secao">Cursos em destaque</h2>
-            <div class="lista-cursos">
-                <article class="curso" id="php">
-                    <img src="img/php.jpg" alt="Ilustração do curso de PHP 7">
-                    <div>
+        <div class="conteudo">
+            <section class="secao">
+                <h2 class="section_titulo">Cursos em destaque</h2>
+                <div class="info">
+                    <article class="info_coluna" id="php">
+                        <img src="img/php.jpg" alt="Ilustração do curso de PHP 7">
                         <h3>Curso de PHP 7</h3>
-                        <p>Conheça a linguagem PHP e como ela pode ser usada na criação de páginas e sistemas para a web.</p>
+                        <p>Conheça a linguagem PHP e seu uso na criação de páginas e sistemas para a web.</p>
                         <a href="contatos.html">Mais informações</a>
-                    </div>
-                </article>
-                <article class="curso" id="asp">
-                    <img src="img/asp.jpg" alt="Ilustração do curso de ASP.NET MVC">
-                    <div>
+                    </article>
+                    <article class="info_coluna" id="asp">
+                        <img src="img/asp.jpg" alt="Ilustração do curso de ASP.NET MVC">
                         <h3>ASP.NET MVC</h3>
-                        <p>Aprenda sobre a estrutura MVC e seu uso no desenvolvimento de aplicações web com ASP.NET.</p>
+                        <p>Conheça a estrutura MVC e seu uso no desenvolvimento de aplicações web com ASP.NET.</p>
                         <a href="contatos.html">Mais informações</a>
-                    </div>
-                </article>
-                <article class="curso" id="web">
-                    <img src="img/web.jpg" alt="Ilustração do curso de programação web">
-                    <div>
-                        <h3>Programação Web</h3>
-                        <p>Conheça HTML, CSS e outras ferramentas para criar páginas e sistemas para a internet.</p>
+                    </article>
+                    <article class="info_coluna" id="web">
+                        <img src="img/web.jpg" alt="Ilustração do curso de programação web">
+                        <h3>Programação WEB</h3>
+                        <p>Aprenda sobre HTML, CSS e outras ferramentas para criar páginas para a internet.</p>
                         <a href="contatos.html">Mais informações</a>
-                    </div>
-                </article>
-            </div>
+                    </article>
+                </div>
+            </section>
 
-            <section id="categorias" class="categorias">
-                <h2 class="titulo-secao">Outras áreas para conhecer</h2>
-                <ul>
-                    <li><strong>Web design:</strong> criação e visual de sites.</li>
-                    <li><strong>Jogos:</strong> desenvolvimento de jogos 2D e 3D.</li>
-                    <li><strong>Aplicativos:</strong> ferramentas para dispositivos móveis.</li>
-                    <li><strong>Redes e servidores:</strong> conceitos de redes e servidores.</li>
-                </ul>
+            <!-- Categorias de cursos -->
+            <section class="secao" id="categorias">
+                <h2 class="section_titulo">Categorias de Cursos</h2>
+                <div class="categorias">
+                    <article class="categoria">
+                        <img src="img/catweb.jpg" alt="Ilustração sobre web design">
+                        <div class="categoria_texto"><h3>WEB Design</h3><p>Criação e visual de sites e sistemas web.</p></div>
+                    </article>
+                    <article class="categoria">
+                        <img src="img/catjogos.jpg" alt="Ilustração sobre programação de jogos">
+                        <div class="categoria_texto"><h3>Programação de Jogos</h3><p>Desenvolvimento de jogos 2D e 3D.</p></div>
+                    </article>
+                    <article class="categoria">
+                        <img src="img/catapp.jpg" alt="Ilustração sobre aplicativos mobile">
+                        <div class="categoria_texto"><h3>Aplicativos Mobile</h3><p>Ferramentas para criar aplicativos para celular.</p></div>
+                    </article>
+                    <article class="categoria">
+                        <img src="img/catredes.jpg" alt="Ilustração sobre redes e servidores">
+                        <div class="categoria_texto"><h3>Redes e Servidores</h3><p>Conceitos de redes, servidores e sua gestão.</p></div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="secao banner_cursos">
+                <img src="img/01.jpg" alt="Imagem ilustrativa de cursos de informática">
+                <p>Quer saber mais sobre as aulas? <a href="contatos.html">Entre em contato</a>.</p>
             </section>
         </div>
     </main>
@@ -77,8 +91,8 @@
     <!-- Rodapé -->
     <footer class="footer">
         <div class="conteudo">
-            <p>Guilherme Feitosa - GHS Cursos</p>
             <p><a href="index.html">Início</a> | <a href="curso.html">Cursos</a> | <a href="professores.html">Professores</a> | <a href="contatos.html">Contatos</a></p>
+            <p>Guilherme Feitosa - GHS Cursos</p>
         </div>
     </footer>
     <script src="js/main.js"></script>
