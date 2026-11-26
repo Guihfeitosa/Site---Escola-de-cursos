@@ -17,7 +17,7 @@ Abra o arquivo `index.html` no navegador. Use o menu para acessar as páginas de
 - `css/professores.css`: estilos da página de professores.
 - `css/styles.css`: estilos usados na versão anterior das páginas internas.
 - `css/catalogo.css`: estilos das páginas de cursos e contatos.
-- `js/main.js`: funcionamento do menu.
+- `js/main.js`: funcionamento do menu e animação das seções.
 - `js/cursos.js`: busca de cursos.
 - `js/contato.js`: assunto do e-mail de contato.
 - `img/`: imagens do projeto. A imagem `laboratorio-cursos.jpg` foi gerada para ilustrar a página de cursos; não é uma foto da escola.
