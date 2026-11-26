@@ -1,0 +1,22 @@
+/* Transição entre páginas, sem animar o cabeçalho. */
+@view-transition { navigation: auto; }
+header { view-transition-name: cabecalho; }
+::view-transition-old(root) { animation: sair-pagina 280ms ease both; }
+::view-transition-new(root) { animation: entrar-pagina 280ms ease both; }
+::view-transition-group(cabecalho) { animation: none; }
+::view-transition-old(cabecalho) { animation: none; opacity: 0; }
+::view-transition-new(cabecalho) { animation: none; opacity: 1; }
+
+@keyframes sair-pagina {
+    to { opacity: 0.6; transform: translateX(-14px); }
+}
+@keyframes entrar-pagina {
+    from { opacity: 0.6; transform: translateX(14px); }
+}
+
+/* Não anima para quem prefere menos movimento. */
+@media (prefers-reduced-motion: reduce) {
+    ::view-transition-group(*),
+    ::view-transition-old(*),
+    ::view-transition-new(*) { animation: none; }
+}
