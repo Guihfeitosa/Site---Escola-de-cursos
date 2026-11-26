@@ -1,0 +1,444 @@
+/*  ###################################################################################################
+    ESTILOS.CSS (versão comentada)
+    Aboordagem "mobile first": as regras base valem para telas pequenas e as
+    media queries no final (480px, 760px, 1024px e 1200px) vão ampliando o 
+    layout para telas maiores.
+    Paleta: laranja #FBA919 (destaque), branco #FFF e cinza escuro #333
+    ################################################################################################### */
+
+/* --------------------------------------------------------------------------------------------------
+    FONTES
+    Importa duas fontes de Google Fonts: 
+    - Open Sans: texto corrido
+    - Yanone Kaffeesatz: título
+    --------------------------------------------------------------------------------------------------- */
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+    @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+
+    /* Lembrete (comentário original) de como usar cada fonte:
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: 'Open Sans', sans-serif; */
+
+    /* ----------------------------------------------------------------------------------------------
+       RESET / BASE
+       ---------------------------------------------------------------------------------------------- */
+
+    /*  faz width e height incluírem padding e borda, o que facilita calcular
+        larguras em porcentagem sem estourar o tamanho do elemento. */
+    *{
+        box-sizing: border-box;
+    }
+
+    /*  Remove a margem padrão do navegador, centraliza o corpo da página e
+        define a fonte do texto corrido. */
+    body {
+        margin:0 auto;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    /* Todos os títulos usam a fonte Yanone Kaffeesatz, com um pequeno
+       espaçamento entre as letras para dar mais leveza. */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        letter-spacing: 1.5px;
+    }
+
+    /* Imagens responsivas: nunca ultrapassam a largura do container e viram
+       bloco para eliminar o espaço em branco que aparece embaixo delas. */
+    img{
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    /* ------------------------------------------------------------------------------------------------
+       CABEÇALHO (header)
+       ------------------------------------------------------------------------------------------------ */
+
+    /* Altura fixa de 60px. O menu mobile (.nav) usa esse valor para se
+       posicionar logo abaixo (top: 60px). */
+       .header {
+        height: 60px;
+       }
+
+    /* Dentro do cabeçalho, logo o botão de menu ficam lado a lado,
+       um em cada ponta. */
+    .header .conteudo{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* Container central do site: ocupa 99% da largura em telas pequenas e é
+       centralizado. Nas telas maiores a largura passa a ser fixa 
+       (1000px e 1200 px, nas media queries). */
+       .conteudo {
+        margin: auto;
+        width: 99%;
+       }
+
+    /* Atenção: esta margem superior de 10px é sobrescrita pela regra
+       ".logo, .icon-menu" logo abaixo, que usa o atalho "margin: 5px"
+       e vem depois. Na prática, o logo fica com margin-top de 5px. */
+    .logo{
+        margin-top: 10px;
+    }
+
+    /* Estilo comum ao logo e ao botão de menu: margem de 5px e texto branco. */
+    .logo, .icon-menu{
+        margin: 5px;
+        color: #FFF;
+    }
+
+    /* Botão do menu "hambúrguer" (aparece só no mobile).
+       Quadrado laranja de 40x40px, com cantos arredondados, o ícone centralizado
+       (line-height maior que a altura ajuda a alinhar a fonte do ícone) e
+       margin-left:auto para encostá-lo na direita. */
+    .icon-menu{
+        display: block;
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+        background: #FBA919;
+        text-align: center;
+        line-height: 45px;
+        border-radius: 5px;
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    /* ------------------------------------------------------------------------------------------------
+       MENU DE NAVEGAÇÃO
+       ------------------------------------------------------------------------------------------------ */
+
+    /* No mobile, o menu fica escondido fora da tela, à esquerda (left:-100%),
+       logo abaixo do cabeçalho. A transição de 0,4s faz ele deslizar quando
+       a classe .mostrar é adicionada. */
+    .nav {
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        transition: all 0.4s;
+    }
+
+    /* Remove marcadores e espaçamentos da lista do menu. */
+    .menu{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Cada link do menu é um bloco laranja com texto branco, sem sublinhado. */
+    .menu_link{
+        display: block;
+        padding: 15px;
+        background: #FBA919;
+        text-decoration: none;
+        color: #FFF;
+    }
+
+    /* Ao passar o mouse (e no item da página atual, ".select") as cores se
+       invertem: fundo branco e texto laranja. */
+    .menu_link:hover , .select {
+        background: white;
+        color: #FBA919;
+    }
+
+    /* Classe adicionada por JavaScript ao clicar no botão do menu: traz o menu
+    para dentro da tela (left:0). */
+    .mostrar{
+        left: 0%;
+    }
+
+    /* ------------------------------------------------------------------------------------------------
+       BANNER
+       ------------------------------------------------------------------------------------------------ */
+
+    /* Sobe o banner 60px para ficar atrás do cabeçalho (que tem 60px de altura),
+       e z-index negativo o mantém atrás dos demais elementos. O
+       position:relative permite posicionar o texto sobre a imagem. */
+       .banner {
+        margin-top: -60px;
+        z-index: -1000;
+        position: relative;
+        margin-bottom: 20px;
+       }
+
+       .banner img {
+        width: 100%;
+       }
+
+       /* Texto do banner centralizado sobre a imagem: o topo e a esquerda em 50%
+          marcam o centro, e o transform puxa o bloco metade da sua própria
+          largura e altura de volta, centralizando de verdade. */
+        .banner .conteudo{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            color: #FFF;
+            text-align: center;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        /* Título do banner (cresce nas media queries). */
+        .banner_titulo{
+            font-size: 25px;
+        }
+
+        /* Texto de apoio do banner: escondido no mobile para não poluir a imagem
+           (volta a aparecer a partir de 480px). */
+        .banner_txt{
+            display: none;
+        }
+
+    /* ------------------------------------------------------------------------------------------------
+       BLOCOS DE INFORMAÇÃO (info)
+       ------------------------------------------------------------------------------------------------ */
+
+       /* Cada coluna é um cartão leranja com texto branco. No mobile as colunas
+          ficam empilhadas, separadas por margem inferior. */
+        .info_coluna{
+            background: #FBA919;
+            color: #FFF;
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+
+    /* ------------------------------------------------------------------------------------------------
+       CURSOS
+       ------------------------------------------------------------------------------------------------ */
+   
+    /* Cada curso é um bloco com imagem; position:relative permite colocar a
+       descrição por cima da imagem. */
+    .cursos_coluna{
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    /* Descrição sobreposta à imagem: faixa preta semitransparente (60% de
+       opacidade) ocupando a altura toda e 60% da largura, à esquerda. */
+    .cursos_descricao{
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #FFF;
+        background: rgba(0, 0, 0, 0.6);
+        width: 60%;
+        height: 100%;
+        padding: 5px;
+    }
+
+    /* Título de cada curso. */
+    .cursos_titulo{
+        font-size: 25px;
+        margin: 5px 0;
+    }
+
+    /* Título das seções (por exemplo, "Cursos"): centralizado, laranja e grande; */
+    .section_titulo{
+        text-align: center;
+        font-size: 35px;
+        color: #FBA919;
+        width: 100%;
+    }
+
+        /* ------------------------------------------------------------------------------------------------
+       RODAPÉ (footer)
+    ------------------------------------------------------------------------------------------------ */
+
+    /* Fundo cinza escuro com texto branco centralizado. */
+    .footer{
+        background: #333;
+        color: #FFF;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Alinha todos os ícones e a imagem de e-mail exatamente na mesma linha */
+    .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Ícones das redes sociais: qualquer elemento dentro de ".social" cuja
+       classe comece com "icon-" vira um círcuito branco de 50x50px, com o ícone
+       cinza centralizado. O line-height de 40px ajusta o alinhamento vertical
+       de ícone dentro do círculo. */
+    .social [class^="icon-"]{
+        display: inline-block;
+        color: #333;
+        text-decoration: none;
+        font-size: 30px;
+        padding: 10px;
+        background: white;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        line-height: 30px;
+    }
+
+    .social img {
+        display: block;
+    }
+
+    /* Conecta as classes originais aos desenhos dos ícones */
+    [class^="icon-"] {
+        font-family: FontAwesome;
+        font-style: normal;
+    }
+    .icon-menu::before { content: "\f0c9"; }
+    .icon-facebook-square::before { content: "\f082"; }
+    .icon-twitter-square::before { content: "\f081"; }
+    .icon-youtube::before { content: "\f167"; }
+    .icon-whatsapp::before { content: "\f232"; }
+
+    /* ------------------------------------------------------------------------------------------------
+       MEDIA QUERIES (RESPONSIVIDADE)
+       Adaptação do layout para telas maiores: 480px, 760px, 1024px e 1200px.
+    ------------------------------------------------------------------------------------------------ */
+
+    /* A partir de 480px: mostra o texto do banner, coloca os blocos de informação
+       em 3 colunas lado a lado e os cursos em 2 colunas. */
+    @media(min-width: 480px) {
+        .logo {
+            font-size: 40px;
+        }
+
+        .banner_titulo {
+            font-size: 30px;
+            margin: 5px 0;
+        }
+
+        .banner_txt {
+            display: block;
+            font-size: 18px;
+            margin: 7px 0;
+        }
+
+        .info, .cursos {
+            display: flex;
+            justify-content: space-between;
+            margin-top: -90px;
+        }
+
+        .info_coluna {
+            width: 32%;
+        }
+
+        .info_img {
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .cursos {
+            flex-wrap: wrap;
+            margin-top: 0;
+        }
+
+        .cursos_coluna {
+            width: 49%;
+        }
+
+        .social [class^="icon-"] {
+            margin: 0 10px;
+        }
+    }
+
+    /* A partir de 760px (tablets): aumenta os títulos do banner e dos cursos. */
+    @media(min-width: 760px) {
+        .banner_titulo {
+            font-size: 50px;
+        }
+
+        .cursos_titulo {
+            font-size: 40px;
+        }
+    }
+
+    /* A partir de 1024px (desktop): fixa a largura do conteúdo em 1000px, esconde
+       o botão hambúrguer e exibe o menu aberto na horizontal no topo. */
+    @media(min-width: 1024px) {
+        .conteudo {
+            width: 1000px;
+        }
+
+        .section_titulo {
+            font-size: 50px;
+            margin: 30px 0;
+        }
+
+        .nav {
+            position: static;
+            width: auto;
+        }
+
+        .menu {
+            display: flex;
+        }
+
+        .icon-menu {
+            display: none;
+        }
+
+        .menu_link {
+            background: none;
+            font-size: 20px;
+        }
+
+        .select {
+            color: #FFF;
+            background: #FBA919;
+        }
+
+        .banner_titulo {
+            font-size: 60px;
+        }
+
+        .banner_txt {
+            font-size: 25px;
+        }
+
+        .cursos_titulo {
+            font-size: 50px;
+        }
+
+        .cursos_txt {
+            font-size: 20px;
+        }
+
+        .info {
+            margin-top: -120px;
+        }
+
+        .info_img {
+            height: 200px;
+        }
+
+        .info_titulo {
+            font-size: 40px;
+            margin: 5px 0;
+        }
+    }
+
+    /* A partir de 1200px (telas grandes): amplia o container para 1200px e sobe
+       mais os cartões de destaque sobre o banner. */
+    @media(min-width: 1200px) {
+        .conteudo {
+            width: 1200px;
+        }
+
+        .logo {
+            font-size: 60px;
+        }
+
+        .banner .conteudo {
+            top: 40%;
+        }
+
+        .info {
+            margin-top: -220px;
+        }
+    }

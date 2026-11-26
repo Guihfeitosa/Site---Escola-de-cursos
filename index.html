@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <!-- Configuração de conjunto de caracteres para suporte  e acentos e caracteres essenciais -->
+    <meta charset="UTF-8">
+
+    <!-- Configuração de viewport para responsividade em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,
+    minimum-scale = 1">
+
+    <!-- Palavras-chave e descrição para otimização de motores de busca (SEO) -->
+    <meta name="keywords" content="curso de programação web, curso programador web, programar web, programação web">
+    <meta name="description" content="Aprender programação, Aprenda programação com Profesor Guilherme H. S. Feitosa">
+
+    <!-- Favicon (icone que aparece na aba do navegador) -->
+    <link rel="shortcut icon" type="image/x-icon" href="./imagens/escola.png">
+
+    <!-- Importação de biblioteca externa de ícones (Myfontastic) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+    <!-- Importação de folha de estilos (CSS principal) -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+
+    <!-- Título da página exibido no navegador -->
+    <title>GHS - Início</title>
+</head>
+<body>
+    <!-- #######################################################
+         CABEÇALHO DA PÁGINA (HEADER) 
+         ####################################################### -->
+    <header class="header">
+        <div class="conteudo">
+            <!-- Logotipo da escola/site -->
+            <h1 class="logo">GHS - Cursos</h1>
+
+            <!-- Botão de menu hamburguer para telas menores (acionado via JS) -->
+            <span class="icon-menu" id="btn-menu"></span>
+
+            <!-- Menu de navegação principal -->
+             <nav class="nav" id="nav">
+                    <ul class="menu">
+                        <li class="menu_item"><a href="index.html" class="menu_link select">Início</a></li>
+                        <li class="menu_item"><a href="curso.html" class="menu_link">Cursos</a></li>
+                        <li class="menu_item"><a href="usuarios.html" class="menu_link">Usuários</a></li>
+                        <li class="menu_item"><a href="contatos.html" class="menu_link">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ########################################################
+         BANNER PRINCIPAL / DESTAQUE 
+         ######################################################## -->
+
+    <div class="banner">
+        <img src="img/banner.jpg" alt="Banner">
+        <div class="conteudo">
+            <h2 class="banner_titulo">A Melhor Escola de Cursos</h2>
+            <p class="banner_txt">Estudo a distância de forma fácil e prática!</p>
+        </div>
+    </div>
+
+    <!-- ########################################################
+         CONTEÚDO PRINCIPAL (MAIN) 
+         ######################################################## -->
+    <main class = "main">
+        <div class= "conteudo">
+
+            <!-- Secção de Destaques / Cursos em evidência -->
+            <section class = "info">
+                <!-- artigo 1: Cirsp de PHP-->
+                <article class = "info_coluna">
+                    <img src = "img/php.jpg" alt="Curso de PHP 7" class="info_img" />
+                    <h2 class = "info_titulo">Curso de PHP 7</h2>
+                    <p class = "info_txt">Este é o novo curso de PHP 7 em MVC, aprenda tudo sobre essa linguagem para desenvolver páginas web</p>
+                </article>
+
+                <!-- artigo 2: Curso de ASP.NET -->
+                <article class="info_coluna">
+                    <img src="img/asp.jpg" alt="Curso de ASP NET MVC" class="info_img">
+                    <h2 class="info_titulo">Curso de ASP NET MVC</h2>
+                    <p class = "info_txt"> Este é o curso novo de Asp net mvc, temos uma sequência com 14
+                        cursos completos nessa área!!</p>
+                </article>
+
+                <!-- Artigo 3 : Curso de Programação Web -->
+                <article class="info_coluna">
+                    <img src="img/web.jpg" alt="Curso de Programação web" class="info_img">
+                    <h2 class = "info_titulo">Programação WEB</h2>
+                    <p class="info_txt">Este é o curso novo de programação web, aprenda tudo sobre HTML,
+                        CSS, PHP e muito mais!!</p>
+                </article>
+            </section>
+
+            <!-- Secção de Categorias de Curso -->
+             <section class="cursos">
+                <h2 class="section_titulo">Categorias de Cursos</h2>
+
+                <!-- Categoria 1: Web Design -->
+                <div class="cursos_coluna">
+                    <img src="img/catweb.jpg" alt="Categoria web Design" class="cursos_img">
+                    <div class="cursos_descricao">
+                        <h2 class="cursos_titulo">WEB Design</h2>
+                        <div class="cursos_txt">
+                            Na categoria de webdesign e programação web você aprende a criar sites e sistemas web,
+                            são mais de 60 cursos nessa área!!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categoria 2: Programação de Jogos -->
+                 <div class="cursos_coluna">
+                    <img src="img/catjogos.jpg" alt="Categoria Jogos" class="cursos_img">
+                    <div class="cursos_descricao">
+                        <h2 class="cursos_titulo">Programação de Jogos</h2>
+                        <div class="cursos_txt">
+                            Na categoria de programação de jogos você aprenderá a desenvolver jogos 3d e
+                            2d em várias plataformas!!
+                        </div>
+                    </div>
+                 </div>
+
+                 <!-- Categoria 3: Aplicativos Mobile -->
+                  <div class="cursos_coluna">
+                    <img src="img/catapp.jpg" alt="Categoria mobile" class="cursos_img">
+                    <div class="cursos_descricao">
+                        <h2 class="cursos_titulo">Aplicativos Mobile</h2>
+                        <div class="cursos_txt">
+                            Na categoria de Aplicativos Mobile trabalhamos com o xamarin e o 
+                            android strudio para aplicativos!!
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- Categoria 4: Redes e Servidores -->
+                <div class="cursos_coluna">
+                    <img src="img/catredes.jpg" alt="Categoria Redes" class="cursos_img">
+                    <div class="cursos_descricao">
+                        <h2 class="cursos_titulo">Redes e Servidores</h2>
+                        <div class="cursos_txt">
+                            Na categoria de Redes você aprenderá a trabalhar com servidores e gestão de redes!!
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+</main>
+
+<!-- ####################################################
+     RODAPÉ DA PÁGINA (FOOTER) 
+     #################################################### -->
+<footer class="footer">
+    <div class="conteudo">
+        <!-- links de Redes Sociais e Contactos -->
+        <div class="social">
+            <a href="https://www.facebook.com/" class="icon-facebook-square" target="_blank" aria-label="Facebook"></a>
+            <a href="https://x.com/?lang=pt" class="icon-twitter-square" target="_blank" aria-label="Twitter"></a>
+            <a href="https://www.youtube.com/" class="icon-youtube" target="_blank" aria-label="Youtube"></a>
+            <a href="https://web.whatsapp.com/login/" class="icon-whatsapp" title="11 97327-5288" target="_blank" aria-label="Whatsapp"></a>
+            <a href="https://mail.google.com/mail/u/0/?hl=pt-BR#inbox" target="_blank" aria-label="E-mail">
+                <img src="img/email.png" width="50px" alt="teste@hotmail.com" target="_blank" title="teste@hotmail.com">
+            </a>
+        </div>
+
+        <!-- Direitos de Autor -->
+        <p class="copy">Guilherme Feitosa - Todos os Direitos Reservados!!</p>
+    </div>
+</footer>
+
+<!-- ===========================================================
+     SCRIPTS JAVASCRIPT
+     =========================================================== -->
+<!-- -->
+     <script type="text/javascript" src="js/menu.js"></script>
+
+</body>
+</html>
