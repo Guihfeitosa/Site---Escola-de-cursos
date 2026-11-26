@@ -1,0 +1,34 @@
+/* Apresentação dos professores */
+.professores_topo { background: #fba919; padding: 50px 0; }
+.professores_topo h1 { font-size: 56px; margin: 0 0 10px; }
+.professores_topo p:last-child { margin-bottom: 0; }
+
+/* Foto e texto do perfil */
+.perfil { display: grid; grid-template-columns: minmax(220px, 320px) minmax(0, 1fr); gap: 55px; align-items: center; padding: 65px 0; }
+.perfil_foto { padding: 10px; background: #fba919; }
+.perfil_foto img { width: 100%; height: auto; }
+.perfil_texto .marcador { color: #8a5000; margin-bottom: 10px; }
+.perfil_texto h2 { font-size: 46px; margin: 0 0 18px; }
+.perfil_texto > p:not(.marcador) { max-width: 52ch; }
+.perfil_links { display: flex; align-items: center; flex-wrap: wrap; gap: 22px; margin-top: 24px; }
+.perfil_contato { font-weight: bold; }
+
+/* Links para os cursos */
+.areas_professor { background: #f3f2ef; padding: 50px 0; }
+.areas_professor h2 { font-size: 40px; margin: 0 0 10px; }
+.areas_professor_lista { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 25px; margin-top: 26px; }
+.areas_professor_lista a { display: block; border-top: 3px solid #fba919; padding: 14px 0; color: #303030; text-decoration: none; }
+.areas_professor_lista a:hover { text-decoration: underline; }
+.areas_professor_lista strong { display: block; font-family: 'Yanone Kaffeesatz', Arial, sans-serif; font-size: 27px; line-height: 1.2; }
+.areas_professor_lista span { display: block; margin-top: 5px; }
+
+/* Ajustes para celulares */
+@media (max-width: 760px) {
+    .perfil { grid-template-columns: 1fr; gap: 25px; padding: 45px 0; }
+    .perfil_foto { max-width: 320px; }
+    .perfil_texto h2 { font-size: 38px; }
+    .areas_professor_lista { grid-template-columns: 1fr; gap: 10px; }
+}
+@media (max-width: 560px) {
+    .professores_topo h1 { font-size: 43px; }
+}

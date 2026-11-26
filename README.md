@@ -14,7 +14,8 @@ Abra o arquivo `index.html` no navegador. Use o menu para acessar as páginas de
 - `contatos.html`: formas de contato.
 - `usuarios.html`: endereço antigo que leva à página de professores.
 - `css/inicio.css`: estilos da página inicial.
-- `css/styles.css`: estilos da página de professores.
+- `css/professores.css`: estilos da página de professores.
+- `css/styles.css`: estilos usados na versão anterior das páginas internas.
 - `css/catalogo.css`: estilos das páginas de cursos e contatos.
 - `js/main.js`: funcionamento do menu.
 - `js/cursos.js`: busca de cursos.
