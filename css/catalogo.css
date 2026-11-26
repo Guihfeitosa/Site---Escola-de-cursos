@@ -56,7 +56,9 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
 .areas_conteudo { display: grid; grid-template-columns: 1fr 1.4fr; gap: 70px; }
 .areas_lista { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px 30px; }
 .areas_lista > div { border-top: 3px solid #fba919; padding-top: 12px; }
-.areas_lista h3 { font-size: 26px; margin: 0 0 5px; }
+.area_cabecalho { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-bottom: 12px; }
+.area_cabecalho img { width: 104px; height: 104px; object-fit: contain; flex-shrink: 0; }
+.areas_lista h3 { font-size: 26px; margin: 0; }
 .duvida { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 48px 0; }
 
 /* Página de contatos */
