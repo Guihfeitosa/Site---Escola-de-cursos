@@ -3,44 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conheça a GHS - Cursos e suas páginas de cursos, professores e contatos.">
+    <meta name="description" content="Conheça as páginas da GHS - Cursos.">
     <link rel="icon" href="img/escola.png" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
     <title>GHS - Professores</title>
 </head>
 <body>
     <!-- Cabeçalho e menu -->
-    <header class="header">
-        <div class="conteudo header-conteudo">
-            <a class="logo" href="index.html">GHS - Cursos</a>
-            <button class="menu-botao" id="btn-menu" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">☰</button>
-            <nav class="nav" id="nav" aria-label="Menu principal">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="curso.html">Cursos</a></li>
-                    <li><a href="professores.html" class="ativo" aria-current="page">Professores</a></li>
-                    <li><a href="contatos.html">Contatos</a></li>
-                </ul>
-            </nav>
+    <div class="topo">
+        <header class="header">
+            <div class="conteudo header_conteudo">
+                <a class="logo" href="index.html">GHS - Cursos</a>
+                <button class="menu_botao" id="btn-menu" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">☰</button>
+                <nav class="nav" id="nav" aria-label="Menu principal">
+                    <ul class="menu">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="curso.html">Cursos</a></li>
+                        <li><a href="professores.html" class="select" aria-current="page">Professores</a></li>
+                        <li><a href="contatos.html">Contatos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="topo_texto conteudo">
+            <h1>Nossos Professores</h1>
+            <p>Conheça quem está por trás das aulas.</p>
         </div>
-    </header>
+    </div>
 
     <main>
 
-        <div class="conteudo pagina">
-            <h1 class="titulo-pagina">Professores</h1>
-            <p class="introducao">Conheça o professor apresentado no site da GHS - Cursos.</p>
-
-            <section class="professor">
-                <figure>
-                    <img src="img/02.jpg" alt="Imagem ilustrativa de uma estudante com cadernos">
-                    <figcaption>Imagem ilustrativa</figcaption>
-                </figure>
-                <div class="professor-texto">
-                    <h2>Guilherme H. S. Feitosa</h2>
-                    <p>Professor apresentado neste projeto, com foco no ensino de programação e tecnologia.</p>
-                    <p>Para saber mais sobre as aulas e os cursos, entre em contato com a escola.</p>
-                    <a class="botao" href="contatos.html">Entre em contato</a>
+        <div class="conteudo">
+            <section class="secao">
+                <h2 class="section_titulo">Quem ensina</h2>
+                <div class="professor">
+                    <div class="professor_apresentacao">
+                        <h3>Guilherme H. S. Feitosa</h3>
+                        <p>Professor apresentado neste site, com foco no ensino de programação e tecnologia.</p>
+                        <p>Quer saber mais sobre as aulas? Fale com a escola pela página de contatos.</p>
+                        <a class="link_claro" href="contatos.html">Entre em contato</a>
+                    </div>
+                    <div class="professor_cursos">
+                        <h3>O que você pode aprender</h3>
+                        <p>Conheça algumas das áreas apresentadas no site:</p>
+                        <ul>
+                            <li>PHP e desenvolvimento web</li>
+                            <li>ASP.NET MVC</li>
+                            <li>HTML e CSS</li>
+                        </ul>
+                        <a href="curso.html">Veja os cursos</a>
+                    </div>
                 </div>
             </section>
         </div>
@@ -49,8 +61,8 @@
     <!-- Rodapé -->
     <footer class="footer">
         <div class="conteudo">
-            <p>Guilherme Feitosa - GHS Cursos</p>
             <p><a href="index.html">Início</a> | <a href="curso.html">Cursos</a> | <a href="professores.html">Professores</a> | <a href="contatos.html">Contatos</a></p>
+            <p>Guilherme Feitosa - GHS Cursos</p>
         </div>
     </footer>
     <script src="js/main.js"></script>

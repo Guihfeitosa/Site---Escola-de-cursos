@@ -3,59 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conheça a GHS - Cursos e suas páginas de cursos, professores e contatos.">
+    <meta name="description" content="Conheça as páginas da GHS - Cursos.">
     <link rel="icon" href="img/escola.png" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
     <title>GHS - Contatos</title>
 </head>
 <body>
     <!-- Cabeçalho e menu -->
-    <header class="header">
-        <div class="conteudo header-conteudo">
-            <a class="logo" href="index.html">GHS - Cursos</a>
-            <button class="menu-botao" id="btn-menu" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">☰</button>
-            <nav class="nav" id="nav" aria-label="Menu principal">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="curso.html">Cursos</a></li>
-                    <li><a href="professores.html">Professores</a></li>
-                    <li><a href="contatos.html" class="ativo" aria-current="page">Contatos</a></li>
-                </ul>
-            </nav>
+    <div class="topo">
+        <header class="header">
+            <div class="conteudo header_conteudo">
+                <a class="logo" href="index.html">GHS - Cursos</a>
+                <button class="menu_botao" id="btn-menu" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">☰</button>
+                <nav class="nav" id="nav" aria-label="Menu principal">
+                    <ul class="menu">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="curso.html">Cursos</a></li>
+                        <li><a href="professores.html">Professores</a></li>
+                        <li><a href="contatos.html" class="select" aria-current="page">Contatos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="topo_texto conteudo">
+            <h1>Entre em Contato</h1>
+            <p>Tire suas dúvidas sobre os cursos.</p>
         </div>
-    </header>
+    </div>
 
     <main>
 
-        <div class="conteudo pagina">
-            <h1 class="titulo-pagina">Contatos</h1>
-            <p class="introducao">Tem alguma dúvida sobre os cursos? Entre em contato.</p>
-
-            <div class="contato">
-                <section class="contato-texto">
-                    <h2>Fale com a gente</h2>
-                    <p>Envie um e-mail ou ligue para saber mais sobre as aulas.</p>
-                    <div class="contato-dado">
-                        <strong>E-mail</strong>
-                        <a href="mailto:teste@hotmail.com">teste@hotmail.com</a>
+        <div class="conteudo">
+            <section class="secao">
+                <h2 class="section_titulo">Fale com a gente</h2>
+                <div class="contato">
+                    <div class="contato_dados">
+                        <h3>Estamos aqui para ajudar</h3>
+                        <p>Para saber mais sobre as aulas, envie um e-mail ou ligue para a escola.</p>
+                        <p><strong>E-mail:</strong><br><a href="mailto:teste@hotmail.com">teste@hotmail.com</a></p>
+                        <p><strong>Telefone:</strong><br><a href="tel:+5511973275288">(11) 97327-5288</a></p>
+                        <a class="link_claro" href="mailto:teste@hotmail.com?subject=Informações%20sobre%20os%20cursos">Enviar e-mail</a>
                     </div>
-                    <div class="contato-dado">
-                        <strong>Telefone</strong>
-                        <a href="tel:+5511973275288">(11) 97327-5288</a>
+                    <div class="contato_imagem">
+                        <img src="img/contato.jpg" alt="Ilustração com um envelope e a palavra contatos">
+                        <p>O botão abre o aplicativo de e-mail do seu dispositivo.</p>
                     </div>
-                    <a class="botao" href="mailto:teste@hotmail.com?subject=Informações%20sobre%20os%20cursos">Enviar e-mail</a>
-                    <p class="aviso">O botão abre o aplicativo de e-mail do seu dispositivo. Os dados de contato são exemplos deste projeto; confirme-os antes de enviar uma mensagem.</p>
-                </section>
-                <img class="contato-imagem" src="img/contato.jpg" alt="Ilustração com um envelope e a palavra contatos">
-            </div>
+                </div>
+                <p class="aviso">Os dados de contato são exemplos deste projeto. Confirme-os antes de enviar uma mensagem.</p>
+            </section>
         </div>
     </main>
 
     <!-- Rodapé -->
     <footer class="footer">
         <div class="conteudo">
-            <p>Guilherme Feitosa - GHS Cursos</p>
             <p><a href="index.html">Início</a> | <a href="curso.html">Cursos</a> | <a href="professores.html">Professores</a> | <a href="contatos.html">Contatos</a></p>
+            <p>Guilherme Feitosa - GHS Cursos</p>
         </div>
     </footer>
     <script src="js/main.js"></script>
