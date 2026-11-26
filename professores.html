@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conheça os cursos de tecnologia da GHS - Cursos.">
+    <meta name="description" content="Conheça a GHS - Cursos e suas páginas de cursos, professores e contatos.">
     <link rel="icon" href="img/escola.png" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
     <title>GHS - Professores</title>
@@ -11,9 +11,9 @@
 <body>
     <!-- Cabeçalho e menu -->
     <header class="header">
-        <div class="conteudo header_conteudo">
-            <a class="logo" href="index.html"><img src="img/escola.png" alt=""><span>GHS <small>CURSOS</small></span></a>
-            <button class="menu_botao" id="btn-menu" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">☰</button>
+        <div class="conteudo header-conteudo">
+            <a class="logo" href="index.html">GHS - Cursos</a>
+            <button class="menu-botao" id="btn-menu" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">☰</button>
             <nav class="nav" id="nav" aria-label="Menu principal">
                 <ul>
                     <li><a href="index.html">Início</a></li>
@@ -26,13 +26,33 @@
     </header>
 
     <main>
-        <section class="pagina-topo"><div class="conteudo"><p class="destaque">QUEM ENSINA</p><h1>Nossos professores</h1><p>Conheça quem faz parte do aprendizado na GHS - Cursos.</p></div></section>
-        <section class="conteudo secao">
-            <div class="perfil"><div class="perfil_imagem"><img src="img/escola.png" alt=""></div><div><p class="destaque">PROFESSOR</p><h2>Guilherme H. S. Feitosa</h2><p>Professor apresentado no site, com foco no ensino de programação e tecnologia.</p><p>Quer saber mais sobre as aulas? Entre em contato para tirar suas dúvidas.</p><a class="botao" href="contatos.html">Falar com a escola →</a></div></div>
-        </section>
+
+        <div class="conteudo pagina">
+            <h1 class="titulo-pagina">Professores</h1>
+            <p class="introducao">Conheça o professor apresentado no site da GHS - Cursos.</p>
+
+            <section class="professor">
+                <figure>
+                    <img src="img/02.jpg" alt="Imagem ilustrativa de uma estudante com cadernos">
+                    <figcaption>Imagem ilustrativa</figcaption>
+                </figure>
+                <div class="professor-texto">
+                    <h2>Guilherme H. S. Feitosa</h2>
+                    <p>Professor apresentado neste projeto, com foco no ensino de programação e tecnologia.</p>
+                    <p>Para saber mais sobre as aulas e os cursos, entre em contato com a escola.</p>
+                    <a class="botao" href="contatos.html">Entre em contato</a>
+                </div>
+            </section>
+        </div>
     </main>
-    <!-- Rodapé do site -->
-    <footer class="footer"><div class="conteudo footer_conteudo"><div><strong>GHS - Cursos</strong><p>Aprender é o primeiro passo.</p></div><div><a href="curso.html">Cursos</a><a href="professores.html">Professores</a><a href="contatos.html">Contatos</a></div><p>Guilherme Feitosa · GHS - Cursos</p></div></footer>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="conteudo">
+            <p>Guilherme Feitosa - GHS Cursos</p>
+            <p><a href="index.html">Início</a> | <a href="curso.html">Cursos</a> | <a href="professores.html">Professores</a> | <a href="contatos.html">Contatos</a></p>
+        </div>
+    </footer>
     <script src="js/main.js"></script>
 </body>
 </html>
