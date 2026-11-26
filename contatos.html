@@ -1,28 +1,43 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
-
+<html lang="pt-BR">
 <head>
-    <!-- Configuração de conjunto de caracteres para suporte  e acentos e caracteres essenciais -->
     <meta charset="UTF-8">
-
-    <!-- Configuração de viewport para responsividade em dispositivos móveis -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,
-    minimum-scale = 1">
-
-    <!-- Palavras-chave e descrição para otimização de motores de busca (SEO) -->
-    <meta name="keywords" content="curso de programação web, curso programador web, programar web, programação web">
-    <meta name="description" content="Aprender programação, Aprenda programação com Profesor Guilherme H. S. Feitosa">
-
-    <!-- Favicon (icone que aparece na aba do navegador) -->
-    <link rel="shortcut icon" type="image/x-icon" href="./imagens/escola.png">
-
-    <!-- Importação de folha de estilos (CSS principal) -->
-    <link href="css/styles.css" rel="stylesheet" type="text/css" />
-
-    <!-- Título da página exibido no navegador -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça os cursos de tecnologia da GHS - Cursos.">
+    <link rel="icon" href="img/escola.png" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
     <title>GHS - Contatos</title>
 </head>
 <body>
-    
+    <!-- Cabeçalho e menu -->
+    <header class="header">
+        <div class="conteudo header_conteudo">
+            <a class="logo" href="index.html"><img src="img/escola.png" alt=""><span>GHS <small>CURSOS</small></span></a>
+            <button class="menu_botao" id="btn-menu" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">☰</button>
+            <nav class="nav" id="nav" aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="curso.html">Cursos</a></li>
+                    <li><a href="professores.html">Professores</a></li>
+                    <li><a href="contatos.html" class="ativo" aria-current="page">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="pagina-topo"><div class="conteudo"><p class="destaque">FALE COM A GENTE</p><h1>Entre em contato</h1><p>Tem dúvidas sobre os cursos? Escolha uma forma de conversar com a escola.</p></div></section>
+        <section class="conteudo secao contato-layout">
+            <div><p class="destaque">ESTAMOS AQUI PARA AJUDAR</p><h2>Vamos conversar?</h2><p>Para saber mais sobre os cursos e as aulas, envie uma mensagem por e-mail ou telefone.</p><p class="aviso">Os contatos abaixo são exemplos usados neste projeto. Confirme os dados com a escola antes de enviar uma mensagem.</p>
+                <div class="contato-item"><strong>E-mail</strong><a href="mailto:teste@hotmail.com">teste@hotmail.com</a></div>
+                <div class="contato-item"><strong>Telefone</strong><a href="tel:+5511973275288">(11) 97327-5288</a></div>
+                <a class="botao" href="mailto:teste@hotmail.com?subject=Informações%20sobre%20os%20cursos">Escrever um e-mail →</a><p class="nota">O link abre o aplicativo de e-mail do seu dispositivo.</p>
+            </div>
+            <img class="contato_imagem" src="img/contato.jpg" alt="Ilustração de contato">
+        </section>
+    </main>
+    <!-- Rodapé do site -->
+    <footer class="footer"><div class="conteudo footer_conteudo"><div><strong>GHS - Cursos</strong><p>Aprender é o primeiro passo.</p></div><div><a href="curso.html">Cursos</a><a href="professores.html">Professores</a><a href="contatos.html">Contatos</a></div><p>Guilherme Feitosa · GHS - Cursos</p></div></footer>
+    <script src="js/main.js"></script>
 </body>
 </html>

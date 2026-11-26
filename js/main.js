@@ -1,13 +1,12 @@
-// Obtém a referência para o elemento do botão de manu através do seu ID 'btn-menu' [cite: 1]
-var btnMenu = document.getElementById('btn-menu');
+// Abre e fecha o menu em telas pequenas.
+var botao = document.getElementById('btn-menu');
+var menu = document.getElementById('nav');
 
-// Obtém a referência para o elemente de navegação através do seu ID 'nav'[cite: 1]
-var nav = document.getElementeById('nav');
-
-// Adiciona um ouvinte de eventos ('event listener') para escutar cliques no botão do mouse
-btnMenu.addEventListener('click', function(){
-
-    // Alterna a classe 'mostrar' no elemento de navegação:
-    // se ela exisir é removida, se não existir, é adicionada. [cite: 1]
-    nav.classList.toggle('mostrar');
-});
+if (botao && menu) {
+    document.documentElement.classList.add('js');
+    botao.addEventListener('click', function () {
+        var aberto = menu.classList.toggle('mostrar');
+        botao.setAttribute('aria-expanded', String(aberto));
+        botao.setAttribute('aria-label', aberto ? 'Fechar menu' : 'Abrir menu');
+    });
+}
