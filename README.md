@@ -16,7 +16,7 @@ Abra o arquivo `index.html` no navegador. Use o menu para acessar as páginas de
 - `css/inicio.css`: estilos da página inicial.
 - `css/professores.css`: estilos da página de professores.
 - `css/styles.css`: estilos usados na versão anterior das páginas internas.
-- `css/catalogo.css`: estilos das páginas de cursos e contatos.
+- `css/catalogo.css`: estilos compartilhados das páginas internas.
 - `css/transicoes.css`: transição entre as páginas.
 - `js/main.js`: funcionamento do menu e animação entre páginas.
 - `js/cursos.js`: busca de cursos.
@@ -24,3 +24,5 @@ Abra o arquivo `index.html` no navegador. Use o menu para acessar as páginas de
 - `img/`: imagens do projeto. A imagem `laboratorio-cursos.jpg` foi gerada para ilustrar a página de cursos; não é uma foto da escola.
 
 Os contatos da página são exemplos do projeto e devem ser confirmados antes do uso. O link de e-mail abre o aplicativo de e-mail do dispositivo; o site não envia mensagens por conta própria.
+
+A foto `etec-sebrae.png` foi enviada para o projeto e mostra a fachada da ETEC Sebrae. A licença da imagem não foi verificada.

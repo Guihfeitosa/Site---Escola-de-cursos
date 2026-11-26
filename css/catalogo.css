@@ -14,14 +14,14 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
 /* Cabeçalho */
-.cabecalho { background: #333; color: #fff; }
-.cabecalho_conteudo { min-height: 72px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
-.logo { color: #fff; text-decoration: none; font: bold 42px 'Yanone Kaffeesatz', Arial, sans-serif; letter-spacing: 1px; white-space: nowrap; }
+.cabecalho { position: relative; z-index: 2; color: #fff; background: #333; }
+.cabecalho_conteudo { width: 99%; min-height: 60px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.logo { color: #fff; text-decoration: none; font: bold 40px/1 'Yanone Kaffeesatz', Arial, sans-serif; letter-spacing: 1.5px; white-space: nowrap; margin-left: 5px; }
 .nav ul { display: flex; list-style: none; margin: 0; padding: 0; }
-.nav a { display: block; color: #fff; text-decoration: none; font-size: 18px; padding: 22px 15px; }
-.nav a:hover { background: #fff; color: #333; }
+.nav a { display: block; color: #fff; text-decoration: none; font-size: 20px; line-height: 1.2; padding: 15px; }
+.nav a:hover { background: #fff; color: #824b00; }
 .nav a.atual { background: #fba919; color: #222; }
-.menu_botao { display: none; width: 42px; height: 42px; background: #fba919; border: 0; border-radius: 5px; color: #222; font-size: 28px; cursor: pointer; }
+.menu_botao { display: none; width: 40px; height: 40px; background: #fba919; border: 0; border-radius: 5px; color: #222; font-size: 28px; cursor: pointer; }
 .botao { display: inline-block; padding: 12px 20px; font-weight: bold; text-decoration: none; }
 .botao_escuro { background: #333; color: #fff; }
 .botao_escuro:hover { background: #111; }
@@ -29,7 +29,7 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
 
 /* Página de cursos */
 .abertura { display: grid; grid-template-columns: 44% 56%; min-height: 410px; background: #fba919; }
-.abertura_texto { align-self: center; max-width: 520px; padding: 48px max(30px, calc((100vw - 1120px) / 2)); padding-right: 36px; }
+.abertura_texto { align-self: center; justify-self: end; width: min(100%, 540px); padding: 48px 36px 48px 30px; }
 .abertura_texto h1 { font-size: clamp(42px, 5vw, 65px); margin: 0 0 16px; }
 .abertura_texto > p:not(.chamada) { max-width: 42ch; margin-bottom: 25px; }
 .abertura_imagem { position: relative; min-width: 0; margin: 0; }
@@ -79,21 +79,33 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
 .rodape p { margin: 0; }
 .rodape a { color: white; }
 
-/* Telas menores */
-@media (max-width: 800px) {
-    .cabecalho_conteudo { min-height: 64px; flex-wrap: wrap; }
-    .logo { font-size: 36px; }
+/* Ajustes do cabeçalho e das telas menores */
+@media (min-width: 1024px) {
+    .cabecalho_conteudo { width: 1000px; }
+}
+@media (min-width: 1200px) {
+    .cabecalho_conteudo { width: 1200px; }
+    .logo { font-size: 60px; }
+}
+@media (max-width: 1023px) {
+    .cabecalho_conteudo { flex-wrap: wrap; }
     .js .menu_botao { display: block; }
-    .nav { width: 100%; }
-    .js .nav { display: none; }
+    .nav { width: 100%; background: #fba919; }
+    .js .nav { position: absolute; top: 60px; left: 0; display: none; }
     .js .nav.mostrar { display: block; }
-    .nav ul { display: block; padding-bottom: 10px; }
-    .nav a { font-size: 16px; padding: 10px 12px; }
+    .nav ul { display: block; }
+    .nav a { color: #222; font-size: 16px; padding: 15px; }
+    .nav a.atual { background: #fff; color: #824b00; }
+}
+@media (max-width: 800px) {
     .abertura { grid-template-columns: 1fr; }
-    .abertura_texto { max-width: none; padding: 45px 20px; }
+    .abertura_texto { justify-self: stretch; width: 100%; padding: 45px 20px; }
     .abertura_imagem { height: 270px; }
     .areas_conteudo, .contato_conteudo { grid-template-columns: 1fr; gap: 30px; }
     .contato_arte { max-width: 650px; }
+}
+@media (max-width: 479px) {
+    .logo { font-size: 32px; }
 }
 @media (max-width: 560px) {
     .conteudo { width: calc(100% - 30px); }
