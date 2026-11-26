@@ -24,12 +24,13 @@
     }
 
        .header {
-        height: 60px;
+        height: 76px;
        }
 
     .header .conteudo{
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
        .conteudo {
@@ -38,20 +39,48 @@
        }
 
     .logo{
-        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 4px 5px;
+    }
+
+    .logo img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        margin: 0;
+        filter: drop-shadow(0 0 2px #d9c4f2);
+    }
+
+    .logo_nome {
+        display: block;
+        color: #f1e8ff;
+        font: 700 33px/.95 'Open Sans', Arial, sans-serif;
+        letter-spacing: 1px;
+        text-shadow: 0 1px 3px #241334;
+    }
+
+    .logo_subtitulo {
+        display: block;
+        color: #d8c0fa;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 3.5px;
+        margin-top: 5px;
     }
 
     .logo, .icon-menu{
-        margin: 5px;
         color: #FFF;
     }
 
     .icon-menu{
+        margin: 5px;
         display: block;
         width: 40px;
         height: 40px;
         font-size: 30px;
-        background: #FBA919;
+        background: #563276;
         text-align: center;
         line-height: 45px;
         border-radius: 5px;
@@ -61,7 +90,7 @@
 
     .nav {
         position: absolute;
-        top: 60px;
+        top: 76px;
         left: -100%;
         width: 100%;
         transition: all 0.4s;
@@ -76,14 +105,14 @@
     .menu_link{
         display: block;
         padding: 15px;
-        background: #FBA919;
+        background: #563276;
         text-decoration: none;
         color: #FFF;
     }
 
     .menu_link:hover , .select {
         background: white;
-        color: #FBA919;
+        color: #563276;
     }
 
     .mostrar{
@@ -91,7 +120,7 @@
     }
 
        .banner {
-        margin-top: -60px;
+        margin-top: -76px;
         z-index: -1000;
         position: relative;
         margin-bottom: 20px;
@@ -120,7 +149,7 @@
         }
 
         .info_coluna{
-            background: #FBA919;
+            background: #563276;
             color: #FFF;
             padding: 15px;
             margin-bottom: 30px;
@@ -136,7 +165,7 @@
         top: 0;
         left: 0;
         color: #FFF;
-        background: rgba(0, 0, 0, 0.6);
+        background: rgba(48, 28, 62, 0.82);
         width: 60%;
         height: 100%;
         padding: 5px;
@@ -150,12 +179,12 @@
     .section_titulo{
         text-align: center;
         font-size: 35px;
-        color: #FBA919;
+        color: #563276;
         width: 100%;
     }
 
     .footer{
-        background: #333;
+        background: #302638;
         color: #FFF;
         padding: 10px;
         text-align: center;
@@ -280,7 +309,7 @@
 
         .select {
             color: #FFF;
-            background: #FBA919;
+            background: #563276;
         }
 
         .banner_titulo {

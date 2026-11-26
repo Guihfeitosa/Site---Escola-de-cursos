@@ -19,10 +19,16 @@ Abra o arquivo `index.html` no navegador. Use o menu para acessar as páginas de
 - `css/catalogo.css`: estilos compartilhados das páginas internas.
 - `css/transicoes.css`: transição entre as páginas.
 - `js/main.js`: funcionamento do menu e animação entre páginas.
-- `js/cursos.js`: busca de cursos.
+- `js/cursos.js`: busca de cursos e áreas de estudo.
 - `js/contato.js`: assunto do e-mail de contato.
-- `img/`: imagens do projeto. A imagem `laboratorio-cursos.jpg` foi gerada para ilustrar a página de cursos; não é uma foto da escola.
+- `img/`: imagens do projeto. A imagem `laboratorio-cursos.jpg` foi gerada como ilustração e não é uma foto da escola.
 
 Os contatos da página são exemplos do projeto e devem ser confirmados antes do uso. O link de e-mail abre o aplicativo de e-mail do dispositivo; o site não envia mensagens por conta própria.
 
 A foto `etec-sebrae.png` foi enviada para o projeto e mostra a fachada da ETEC Sebrae. A licença da imagem não foi verificada.
+
+A foto `estudo-distancia.jpg` é de [Artem Podrez no Pexels](https://www.pexels.com/photo/young-woman-using-laptop-and-taking-notes-4492126/) e é usada para ilustrar o ensino a distância. A imagem segue a [licença do Pexels](https://www.pexels.com/license/).
+
+A foto `contato-online.jpg` é de [MART PRODUCTION no Pexels](https://www.pexels.com/photo/close-up-photo-of-a-person-typing-7255295/) e segue a [licença do Pexels](https://www.pexels.com/license/).
+
+O símbolo `logo-simbolo.png` foi recortado da logo enviada para o projeto e é usado no cabeçalho.

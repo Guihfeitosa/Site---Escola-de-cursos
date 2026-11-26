@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conheça os cursos de programação e tecnologia da GHS - Cursos.">
     <link rel="icon" href="img/escola.png" type="image/png">
-    <link rel="stylesheet" href="css/catalogo.css?v=5">
+    <link rel="stylesheet" href="css/catalogo.css?v=13">
     <link rel="stylesheet" href="css/transicoes.css">
     <title>GHS - Cursos</title>
 </head>
@@ -13,7 +13,7 @@
     <!-- Cabeçalho do site -->
     <header class="cabecalho">
         <div class="conteudo cabecalho_conteudo">
-            <a class="logo" href="index.html">GHS - Cursos</a>
+            <a class="logo" href="index.html"><img src="img/logo-simbolo.png" alt="" width="230" height="220"><span class="logo_nome">GHS<span class="logo_subtitulo">CURSOS</span></span></a>
             <button class="menu_botao" id="btn-menu" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">☰</button>
             <nav class="nav" id="nav" aria-label="Menu principal">
                 <ul>
@@ -29,33 +29,32 @@
         <!-- Apresentação dos cursos -->
         <section class="abertura">
             <div class="abertura_texto">
-                <p class="chamada">GHS - CURSOS DE TECNOLOGIA</p>
-                <h1>Seu próximo passo começa aqui.</h1>
-                <p>Conheça nossos cursos e descubra o que você pode aprender na área de tecnologia.</p>
+                <h1>Tecnologia se aprende fazendo.</h1>
+                <p>Cursos a distância para conhecer linguagens, criar para a web e descobrir outros caminhos na informática.</p>
                 <a class="botao botao_escuro" href="#lista-cursos">Ver os cursos</a>
             </div>
             <figure class="abertura_imagem">
-                <img src="img/laboratorio-cursos.jpg" alt="Ilustração de um laboratório de informática">
+                <img src="img/estudo-distancia.jpg" alt="Pessoa estudando em casa com um notebook e um caderno" width="500" height="281">
             </figure>
         </section>
 
         <!-- Lista de cursos -->
         <section class="conteudo secao_catalogo" id="lista-cursos">
             <div class="cabecalho_secao">
-                <div><p class="marcador">ESCOLHA UMA ÁREA</p><h2>Nossos cursos</h2><p>Veja os assuntos de cada curso e encontre o que procura.</p></div>
+                <div><h2>Cursos em destaque<span>.</span></h2><p>Pesquise os cursos e as áreas de estudo para encontrar o que procura.</p></div>
                 <div class="busca" id="area-busca" hidden>
-                    <label for="busca-curso">Buscar curso</label>
-                    <input id="busca-curso" type="search" placeholder="Ex.: PHP" autocomplete="off" aria-describedby="resultado-busca">
+                    <label for="busca-curso">Buscar cursos e áreas</label>
+                    <input id="busca-curso" type="search" placeholder="Ex.: PHP ou jogos" autocomplete="off" aria-describedby="resultado-busca">
                 </div>
             </div>
             <p class="resultado" id="resultado-busca" role="status" aria-live="polite"></p>
             <div class="lista_cursos" id="cursos">
-                <article class="curso" id="php" data-busca="php 7 mvc programação web">
+                <article class="curso" id="php" data-busca="php 7 php7">
                     <img class="curso_imagem" src="img/php.jpg" alt="Ilustração do curso de PHP 7" width="128" height="128">
                     <div class="curso_texto"><p class="curso_tipo">PROGRAMAÇÃO</p><h3>Curso de PHP 7</h3><p>Conheça a linguagem PHP e como ela é usada na criação de páginas e sistemas para a web.</p></div>
                     <a href="contatos.html?curso=PHP%207">Pedir informações <span aria-hidden="true">→</span><span class="sr-only"> sobre o curso de PHP 7</span></a>
                 </article>
-                <article class="curso" id="asp" data-busca="asp net mvc programação web">
+                <article class="curso" id="asp" data-busca="asp net mvc aspnet">
                     <img class="curso_imagem" src="img/asp.jpg" alt="Ilustração do curso de ASP.NET MVC" width="128" height="128">
                     <div class="curso_texto"><p class="curso_tipo">DESENVOLVIMENTO WEB</p><h3>ASP.NET MVC</h3><p>Conheça a estrutura MVC e seu uso no desenvolvimento de aplicações web com ASP.NET.</p></div>
                     <a href="contatos.html?curso=ASP.NET%20MVC">Pedir informações <span aria-hidden="true">→</span><span class="sr-only"> sobre ASP.NET MVC</span></a>
@@ -65,27 +64,28 @@
                     <div class="curso_texto"><p class="curso_tipo">WEB</p><h3>Programação Web</h3><p>Aprenda sobre HTML, CSS e outras ferramentas usadas para criar páginas para a internet.</p></div>
                     <a href="contatos.html?curso=Programa%C3%A7%C3%A3o%20Web">Pedir informações <span aria-hidden="true">→</span><span class="sr-only"> sobre programação web</span></a>
                 </article>
+                <div id="resultados-areas"></div>
             </div>
         </section>
 
         <!-- Áreas de estudo -->
         <section class="areas" id="categorias">
             <div class="conteudo areas_conteudo">
-                <div><p class="marcador">EXPLORE TAMBÉM</p><h2>Outras áreas de estudo</h2><p>A tecnologia tem vários caminhos. Conheça alguns deles.</p></div>
+                <div class="areas_intro"><h2>Outras áreas de estudo<span>.</span></h2><p>A tecnologia tem vários caminhos. Conheça alguns deles.</p></div>
                 <div class="areas_lista">
-                    <div>
+                    <div class="area_estudo" data-busca="web design programação web sites html css">
                         <div class="area_cabecalho"><img src="img/catweb.jpg" alt="Ilustração sobre web design" width="104" height="104"><h3>Web design</h3></div>
                         <p>Conheça a criação de páginas, desde a escolha de cores e organização do conteúdo até o uso de HTML e CSS para diferentes telas.</p>
                     </div>
-                    <div>
+                    <div class="area_estudo" data-busca="jogos programação jogos 2d 3d">
                         <div class="area_cabecalho"><img src="img/catjogos.jpg" alt="Ilustração sobre programação de jogos" width="104" height="104"><h3>Jogos</h3></div>
                         <p>Explore como personagens, cenários e regras fazem parte de um jogo e conheça a criação de jogos 2D e 3D para diferentes plataformas.</p>
                     </div>
-                    <div>
+                    <div class="area_estudo" data-busca="aplicativos mobile celular tablet android">
                         <div class="area_cabecalho"><img src="img/catapp.jpg" alt="Ilustração sobre aplicativos mobile" width="104" height="104"><h3>Aplicativos mobile</h3></div>
                         <p>Veja como aplicativos são planejados para celulares e tablets e conheça ferramentas usadas na criação de interfaces para Android.</p>
                     </div>
-                    <div>
+                    <div class="area_estudo" data-busca="redes servidores computadores">
                         <div class="area_cabecalho"><img src="img/catredes.jpg" alt="Ilustração sobre redes e servidores" width="104" height="104"><h3>Redes e servidores</h3></div>
                         <p>Entenda como computadores se conectam em rede, para que servem os servidores e quais são os primeiros passos para configurar e gerenciar esses ambientes.</p>
                     </div>
@@ -102,6 +102,6 @@
         </div>
     </footer>
     <script src="js/main.js?v=3"></script>
-    <script src="js/cursos.js"></script>
+    <script src="js/cursos.js?v=4"></script>
 </body>
 </html>

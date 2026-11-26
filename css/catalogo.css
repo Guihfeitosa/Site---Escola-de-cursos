@@ -1,123 +1,142 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Yanone+Kaffeesatz:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Yanone+Kaffeesatz:400,700');
 
-/* Estilos do site */
+/* Estilos das páginas internas */
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; color: #303030; background: #fff; font-family: 'Open Sans', Arial, sans-serif; line-height: 1.55; }
+body { margin: 0; color: #2e2635; background: #f8f6f3; font-family: 'Open Sans', Arial, sans-serif; line-height: 1.6; }
 img { display: block; max-width: 100%; }
 h1, h2, h3, p { margin-top: 0; }
-h1, h2, h3 { font-family: 'Yanone Kaffeesatz', Arial, sans-serif; line-height: 1.1; letter-spacing: 1px; }
-a { color: #774500; }
-a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid #fba919; outline-offset: 3px; }
-.conteudo { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+h1, h2, h3 { font-family: 'Yanone Kaffeesatz', Arial, sans-serif; line-height: 1.02; font-weight: 700; }
+a { color: #563276; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid #9565c2; outline-offset: 3px; }
+.conteudo { width: min(1120px, calc(100% - 48px)); margin: 0 auto; }
 [hidden] { display: none !important; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
 /* Cabeçalho */
 .cabecalho { position: relative; z-index: 2; color: #fff; background: #333; }
-.cabecalho_conteudo { width: 99%; min-height: 60px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
-.logo { color: #fff; text-decoration: none; font: bold 40px/1 'Yanone Kaffeesatz', Arial, sans-serif; letter-spacing: 1.5px; white-space: nowrap; margin-left: 5px; }
+.cabecalho_conteudo { width: 99%; min-height: 76px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.logo { display: flex; align-items: center; gap: 8px; flex-shrink: 0; margin: 4px 0 4px 5px; text-decoration: none; }
+.logo img { width: 60px; height: 60px; object-fit: contain; filter: drop-shadow(0 0 2px #d9c4f2); }
+.logo_nome { display: block; color: #f1e8ff; font: 700 33px/.95 'Open Sans', Arial, sans-serif; letter-spacing: 1px; text-shadow: 0 1px 3px #241334; }
+.logo_subtitulo { display: block; color: #d8c0fa; font-size: 13px; font-weight: 600; letter-spacing: 3.5px; margin-top: 5px; }
 .nav ul { display: flex; list-style: none; margin: 0; padding: 0; }
 .nav a { display: block; color: #fff; text-decoration: none; font-size: 20px; line-height: 1.2; padding: 15px; }
-.nav a:hover { background: #fff; color: #824b00; }
-.nav a.atual { background: #fba919; color: #222; }
-.menu_botao { display: none; width: 40px; height: 40px; background: #fba919; border: 0; border-radius: 5px; color: #222; font-size: 28px; cursor: pointer; }
-.botao { display: inline-block; padding: 12px 20px; font-weight: bold; text-decoration: none; }
-.botao_escuro { background: #333; color: #fff; }
-.botao_escuro:hover { background: #111; }
-.marcador, .chamada { font-family: 'Open Sans', Arial, sans-serif; font-size: 12px; font-weight: bold; letter-spacing: 1.5px; }
+.nav a:hover { background: #eee8f3; color: #382144; }
+.nav a.atual { background: #d8c4e7; color: #29163a; }
+.menu_botao { display: none; width: 40px; height: 40px; background: #d8c4e7; border: 0; border-radius: 5px; color: #29163a; font-size: 28px; cursor: pointer; }
+.botao { display: inline-block; padding: 14px 21px; font-size: 14px; font-weight: 700; text-decoration: none; }
+.botao_escuro { background: #35203f; color: #fff; }
+.botao_escuro:hover { background: #62417a; }
 
-/* Página de cursos */
-.abertura { display: grid; grid-template-columns: 44% 56%; min-height: 410px; background: #fba919; }
-.abertura_texto { align-self: center; justify-self: end; width: min(100%, 540px); padding: 48px 36px 48px 30px; }
-.abertura_texto h1 { font-size: clamp(42px, 5vw, 65px); margin: 0 0 16px; }
-.abertura_texto > p:not(.chamada) { max-width: 42ch; margin-bottom: 25px; }
-.abertura_imagem { position: relative; min-width: 0; margin: 0; }
-.abertura_imagem img { width: 100%; height: 100%; position: absolute; object-fit: cover; }
-.secao_catalogo { padding: 65px 0; }
+/* Abertura dos cursos */
+.abertura { display: grid; grid-template-columns: 47% 53%; min-height: 500px; background: #ded0e7; }
+.abertura_texto { align-self: center; justify-self: end; width: min(100%, 555px); padding: 64px 48px 64px 24px; }
+.abertura_texto h1 { max-width: 470px; color: #33213e; font-size: clamp(58px, 6.4vw, 88px); letter-spacing: -.5px; margin: 0 0 20px; }
+.abertura_texto > p { max-width: 39ch; margin-bottom: 28px; }
+.abertura_imagem { position: relative; min-width: 0; margin: 0; overflow: hidden; background: #483355; }
+.abertura_imagem img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; }
+
+/* Lista de cursos */
+.secao_catalogo { padding: 85px 0 90px; }
 .cabecalho_secao { display: flex; justify-content: space-between; align-items: end; gap: 30px; }
-.cabecalho_secao h2, .areas h2, .duvida h2 { font-size: 42px; margin: 0 0 10px; }
-.cabecalho_secao p, .areas p, .duvida p { margin-bottom: 0; }
-.cabecalho_secao .marcador, .areas .marcador { margin-bottom: 8px; color: #8a5000; }
-.busca { width: min(100%, 260px); flex-shrink: 0; }
-.busca label { display: block; font-size: 14px; font-weight: bold; margin-bottom: 5px; }
-.busca input { width: 100%; border: 1px solid #777; border-radius: 0; padding: 11px 12px; font: inherit; background: white; }
+.cabecalho_secao h2, .areas h2, .duvida h2 { font-size: clamp(48px, 5vw, 64px); margin: 0 0 12px; }
+.cabecalho_secao h2 span, .areas h2 span, .contato_info h2 span { color: #9270ad; }
+.cabecalho_secao p:last-child, .areas p:last-child, .duvida p { margin-bottom: 0; }
+.busca { width: min(100%, 275px); flex-shrink: 0; }
+.busca label { display: block; font-size: 12px; font-weight: 700; margin-bottom: 7px; }
+.busca input { width: 100%; border: 1px solid #9e8aaa; border-radius: 0; padding: 13px 14px; font: inherit; background: transparent; }
 .resultado { font-size: 14px; margin: 12px 0 0; }
 .resultado:empty { display: none; }
-.lista_cursos { margin-top: 25px; border-top: 2px solid #333; }
-.curso { display: grid; grid-template-columns: 128px minmax(0, 1fr) auto; gap: 24px; align-items: center; padding: 24px 0; border-bottom: 1px solid #ccc; }
-.curso_imagem { width: 128px; height: 128px; object-fit: contain; background: #f3f2ef; }
-.curso_tipo { font-size: 11px; font-weight: bold; letter-spacing: 1px; color: #765000; margin: 0 0 6px; }
-.curso h3 { font-size: 32px; margin: 0 0 6px; }
-.curso_texto > p:last-child { max-width: 65ch; margin: 0; }
-.curso > a { font-weight: bold; white-space: nowrap; text-decoration: none; }
-.curso > a:hover { text-decoration: underline; }
-.areas { background: #f3f2ef; padding: 55px 0; }
-.areas_conteudo { display: grid; grid-template-columns: 1fr 1.4fr; gap: 70px; }
-.areas_lista { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px 30px; }
-.areas_lista > div { border-top: 3px solid #fba919; padding-top: 12px; }
-.area_cabecalho { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-bottom: 12px; }
-.area_cabecalho img { width: 104px; height: 104px; object-fit: contain; flex-shrink: 0; }
-.areas_lista h3 { font-size: 26px; margin: 0; }
-.duvida { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 48px 0; }
+.lista_cursos { margin-top: 30px; border-top: 2px solid #4f365b; }
+.curso { display: grid; grid-template-columns: 120px minmax(0, 1fr) auto; gap: 30px; align-items: center; padding: 26px 0; border-bottom: 1px solid #cfc3d4; }
+.curso_imagem { width: 120px; height: 110px; object-fit: contain; background: #eee9ee; }
+.curso_tipo { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; color: #79538e; margin: 0 0 8px; }
+.curso h3 { font-size: 36px; margin: 0 0 8px; }
+.curso_texto > p:last-child { max-width: 57ch; margin: 0; }
+.curso > a { font-size: 13px; font-weight: 700; white-space: nowrap; text-decoration: none; border-bottom: 1px solid #9d83aa; padding-bottom: 5px; }
+.curso > a:hover { color: #2c1839; border-color: #2c1839; }
+
+/* Áreas de estudo */
+.areas { background: #ece4f0; padding: 85px 0; }
+.areas_conteudo { display: grid; grid-template-columns: .8fr 1.5fr; gap: 80px; }
+.areas_intro { max-width: 300px; }
+.areas_lista { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 35px 40px; }
+.areas_lista > div { border-top: 2px solid #76548b; padding-top: 16px; }
+.area_cabecalho { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
+.area_cabecalho img { width: 88px; height: 88px; object-fit: contain; flex-shrink: 0; }
+.areas_lista h3 { font-size: 30px; margin: 0; }
+.areas_lista p { font-size: 14px; }
+.duvida { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 70px 0; }
+.duvida h2 { font-size: 46px; }
 
 /* Página de contatos */
-.contato_topo { background: #fba919; padding: 50px 0; }
-.contato_topo h1 { font-size: 56px; margin: 0 0 10px; }
+.contato_topo { background: #ded0e7; padding: 72px 0 78px; }
+.contato_topo_conteudo { display: flex; justify-content: space-between; align-items: end; gap: 30px; }
+.contato_topo h1 { color: #33213e; font-size: clamp(62px, 7vw, 96px); margin: 0 0 15px; }
 .contato_topo p:last-child { margin-bottom: 0; }
-.contato_conteudo { display: grid; grid-template-columns: 1fr 1fr; gap: 65px; align-items: center; padding: 60px 0; }
-.contato_info h2 { font-size: 40px; margin-bottom: 14px; }
+.contato_topo_nota { border-left: 1px solid #9d82ad; padding-left: 20px; font-size: 13px; }
+.contato_conteudo { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: start; padding: 85px 0; }
+.contato_info h2 { font-size: 56px; margin-bottom: 15px; }
 .contato_info > p { max-width: 55ch; }
-.dados { margin: 20px 0; }
+.dados { border-top: 1px solid #cfc3d4; padding: 18px 0; }
 .dados strong, .dados a { display: block; }
-.contato_arte img { width: 100%; height: auto; }
-.aviso { color: #555; font-size: 14px; margin-top: 22px; }
+.dados strong { color: #77528e; font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px; }
+.dados a { font-size: 18px; overflow-wrap: anywhere; }
+.contato_info .botao { margin-top: 10px; }
+.contato_arte { background: #443050; color: #f8f6f3; border-top: 8px solid #bca1cc; }
+.contato_arte img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.contato_arte_texto { padding: 28px 40px 35px; }
+.contato_frase { font: 700 clamp(42px, 5vw, 62px)/1 'Yanone Kaffeesatz', Arial, sans-serif; max-width: 350px; margin: 0 0 20px; }
+.contato_arte_texto > p:not(.contato_frase) { max-width: 36ch; color: #e6ddec; }
+.contato_arte a { display: inline-block; color: #fff; margin-top: 18px; font-weight: 700; }
+.aviso { color: #62576a; font-size: 13px; margin-top: 22px; }
 
 /* Rodapé */
-.rodape { background: #333; color: #fff; padding: 25px 0; }
-.rodape_conteudo { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.rodape { background: #302638; color: #f4edf6; padding: 30px 0; }
+.rodape_conteudo { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; font-size: 13px; }
 .rodape p { margin: 0; }
-.rodape a { color: white; }
+.rodape a { color: #f4edf6; }
 
-/* Ajustes do cabeçalho e das telas menores */
-@media (min-width: 1024px) {
-    .cabecalho_conteudo { width: 1000px; }
-}
-@media (min-width: 1200px) {
-    .cabecalho_conteudo { width: 1200px; }
-    .logo { font-size: 60px; }
-}
+/* Ajustes para telas menores */
+@media (min-width: 1024px) { .cabecalho_conteudo { width: 1000px; } }
+@media (min-width: 1200px) { .cabecalho_conteudo { width: 1200px; } }
 @media (max-width: 1023px) {
     .cabecalho_conteudo { flex-wrap: wrap; }
     .js .menu_botao { display: block; }
-    .nav { width: 100%; background: #fba919; }
-    .js .nav { position: absolute; top: 60px; left: 0; display: none; }
+    .nav { width: 100%; background: #e4d7ed; }
+    .js .nav { position: absolute; top: 100%; left: 0; display: none; }
     .js .nav.mostrar { display: block; }
     .nav ul { display: block; }
-    .nav a { color: #222; font-size: 16px; padding: 15px; }
-    .nav a.atual { background: #fff; color: #824b00; }
+    .nav a { color: #29163a; font-size: 16px; padding: 15px; }
+    .nav a.atual { background: #fff; color: #563276; }
 }
 @media (max-width: 800px) {
     .abertura { grid-template-columns: 1fr; }
-    .abertura_texto { justify-self: stretch; width: 100%; padding: 45px 20px; }
-    .abertura_imagem { height: 270px; }
-    .areas_conteudo, .contato_conteudo { grid-template-columns: 1fr; gap: 30px; }
-    .contato_arte { max-width: 650px; }
-}
-@media (max-width: 479px) {
-    .logo { font-size: 32px; }
+    .abertura_texto { justify-self: stretch; width: 100%; padding: 55px 24px; }
+    .abertura_imagem { height: 280px; }
+    .areas_conteudo, .contato_conteudo { grid-template-columns: 1fr; gap: 40px; }
+    .areas_intro { max-width: 500px; }
 }
 @media (max-width: 560px) {
-    .conteudo { width: calc(100% - 30px); }
+    .conteudo { width: calc(100% - 36px); }
+    .cabecalho_conteudo { width: calc(100% - 24px); }
+    .abertura_texto h1 { font-size: 57px; }
+    .secao_catalogo, .areas { padding: 60px 0; }
     .cabecalho_secao { align-items: stretch; flex-direction: column; }
     .busca { width: 100%; }
-    .curso { grid-template-columns: 72px minmax(0, 1fr); gap: 8px 15px; align-items: start; }
-    .curso_imagem { width: 72px; height: 72px; }
-    .curso > a { grid-column: 2; white-space: normal; }
+    .curso { grid-template-columns: 76px minmax(0, 1fr); gap: 8px 17px; align-items: start; }
+    .curso_imagem { width: 76px; height: 76px; }
+    .curso h3 { font-size: 31px; }
+    .curso > a { grid-column: 2; justify-self: start; white-space: normal; }
     .areas_lista { grid-template-columns: 1fr; }
-    .duvida { align-items: flex-start; flex-direction: column; }
-    .contato_topo h1 { font-size: 43px; }
+    .duvida { align-items: flex-start; flex-direction: column; padding: 55px 0; }
+    .contato_topo { padding: 55px 0; }
+    .contato_topo h1 { font-size: 60px; }
+    .contato_topo_nota { display: none; }
+    .contato_conteudo { padding: 60px 0; }
+    .contato_arte_texto { padding: 26px 28px 30px; }
     .rodape_conteudo { display: block; }
-    .rodape p + p { margin-top: 8px; }
+    .rodape p + p { margin-top: 10px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
