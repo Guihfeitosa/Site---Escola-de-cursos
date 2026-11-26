@@ -21,7 +21,7 @@ Abra o arquivo `index.html` no navegador. Use o menu para acessar as páginas de
 - `js/main.js`: funcionamento do menu e animação entre páginas.
 - `js/cursos.js`: busca de cursos e áreas de estudo.
 - `js/contato.js`: assunto do e-mail de contato.
-- `img/`: imagens do projeto. A imagem `laboratorio-cursos.jpg` foi gerada como ilustração e não é uma foto da escola.
+- `img/`: imagens usadas no site.
 
 Os contatos da página são exemplos do projeto e devem ser confirmados antes do uso. O link de e-mail abre o aplicativo de e-mail do dispositivo; o site não envia mensagens por conta própria.
 
