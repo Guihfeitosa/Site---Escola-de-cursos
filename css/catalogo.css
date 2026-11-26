@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Yanone+Kaffeesatz:400,700');
+
+/* Estilos do site */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: #303030; background: #fff; font-family: 'Open Sans', Arial, sans-serif; line-height: 1.55; }
+img { display: block; max-width: 100%; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3 { font-family: 'Yanone Kaffeesatz', Arial, sans-serif; line-height: 1.1; letter-spacing: 1px; }
+a { color: #774500; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid #fba919; outline-offset: 3px; }
+.conteudo { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+[hidden] { display: none !important; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+/* Cabeçalho */
+.cabecalho { background: #333; color: #fff; }
+.cabecalho_conteudo { min-height: 72px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.logo { color: #fff; text-decoration: none; font: bold 42px 'Yanone Kaffeesatz', Arial, sans-serif; letter-spacing: 1px; white-space: nowrap; }
+.nav ul { display: flex; list-style: none; margin: 0; padding: 0; }
+.nav a { display: block; color: #fff; text-decoration: none; font-size: 18px; padding: 22px 15px; }
+.nav a:hover { background: #fff; color: #333; }
+.nav a.atual { background: #fba919; color: #222; }
+.menu_botao { display: none; width: 42px; height: 42px; background: #fba919; border: 0; border-radius: 5px; color: #222; font-size: 28px; cursor: pointer; }
+.botao { display: inline-block; padding: 12px 20px; font-weight: bold; text-decoration: none; }
+.botao_escuro { background: #333; color: #fff; }
+.botao_escuro:hover { background: #111; }
+.marcador, .chamada { font-family: 'Open Sans', Arial, sans-serif; font-size: 12px; font-weight: bold; letter-spacing: 1.5px; }
+
+/* Página de cursos */
+.abertura { display: grid; grid-template-columns: 44% 56%; min-height: 410px; background: #fba919; }
+.abertura_texto { align-self: center; max-width: 520px; padding: 48px max(30px, calc((100vw - 1120px) / 2)); padding-right: 36px; }
+.abertura_texto h1 { font-size: clamp(42px, 5vw, 65px); margin: 0 0 16px; }
+.abertura_texto > p:not(.chamada) { max-width: 42ch; margin-bottom: 25px; }
+.abertura_imagem { position: relative; min-width: 0; margin: 0; }
+.abertura_imagem img { width: 100%; height: 100%; position: absolute; object-fit: cover; }
+.abertura_imagem figcaption { position: absolute; bottom: 0; right: 0; color: #fff; background: rgba(0, 0, 0, .75); font-size: 12px; padding: 4px 8px; }
+.secao_catalogo { padding: 65px 0; }
+.cabecalho_secao { display: flex; justify-content: space-between; align-items: end; gap: 30px; }
+.cabecalho_secao h2, .areas h2, .duvida h2 { font-size: 42px; margin: 0 0 10px; }
+.cabecalho_secao p, .areas p, .duvida p { margin-bottom: 0; }
+.cabecalho_secao .marcador, .areas .marcador { margin-bottom: 8px; color: #8a5000; }
+.busca { width: min(100%, 260px); flex-shrink: 0; }
+.busca label { display: block; font-size: 14px; font-weight: bold; margin-bottom: 5px; }
+.busca input { width: 100%; border: 1px solid #777; border-radius: 0; padding: 11px 12px; font: inherit; background: white; }
+.resultado { font-size: 14px; margin: 12px 0 0; }
+.resultado:empty { display: none; }
+.lista_cursos { margin-top: 25px; border-top: 2px solid #333; }
+.curso { display: grid; grid-template-columns: 80px 1fr auto; gap: 24px; align-items: center; padding: 24px 0; border-bottom: 1px solid #ccc; }
+.curso_numero { font: 48px 'Yanone Kaffeesatz', Arial, sans-serif; color: #b96b00; }
+.curso_tipo { font-size: 11px; font-weight: bold; letter-spacing: 1px; color: #765000; margin: 0 0 6px; }
+.curso h3 { font-size: 32px; margin: 0 0 6px; }
+.curso_texto > p:last-child { max-width: 65ch; margin: 0; }
+.curso > a { font-weight: bold; white-space: nowrap; text-decoration: none; }
+.curso > a:hover { text-decoration: underline; }
+.areas { background: #f3f2ef; padding: 55px 0; }
+.areas_conteudo { display: grid; grid-template-columns: 1fr 1.4fr; gap: 70px; }
+.areas_lista { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px 30px; }
+.areas_lista > div { border-top: 3px solid #fba919; padding-top: 12px; }
+.areas_lista h3 { font-size: 26px; margin: 0 0 5px; }
+.duvida { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 48px 0; }
+
+/* Página de contatos */
+.contato_topo { background: #fba919; padding: 50px 0; }
+.contato_topo h1 { font-size: 56px; margin: 0 0 10px; }
+.contato_topo p:last-child { margin-bottom: 0; }
+.contato_conteudo { display: grid; grid-template-columns: 1fr 1fr; gap: 65px; align-items: center; padding: 60px 0; }
+.contato_info h2 { font-size: 40px; margin-bottom: 14px; }
+.contato_info > p { max-width: 55ch; }
+.dados { margin: 20px 0; }
+.dados strong, .dados a { display: block; }
+.contato_arte img { width: 100%; height: auto; }
+.aviso { color: #555; font-size: 14px; margin-top: 22px; }
+
+/* Rodapé */
+.rodape { background: #333; color: #fff; padding: 25px 0; }
+.rodape_conteudo { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.rodape p { margin: 0; }
+.rodape a { color: white; }
+
+/* Telas menores */
+@media (max-width: 800px) {
+    .cabecalho_conteudo { min-height: 64px; flex-wrap: wrap; }
+    .logo { font-size: 36px; }
+    .js .menu_botao { display: block; }
+    .nav { width: 100%; }
+    .js .nav { display: none; }
+    .js .nav.mostrar { display: block; }
+    .nav ul { display: block; padding-bottom: 10px; }
+    .nav a { font-size: 16px; padding: 10px 12px; }
+    .abertura { grid-template-columns: 1fr; }
+    .abertura_texto { max-width: none; padding: 45px 20px; }
+    .abertura_imagem { height: 270px; }
+    .areas_conteudo, .contato_conteudo { grid-template-columns: 1fr; gap: 30px; }
+    .contato_arte { max-width: 650px; }
+}
+@media (max-width: 560px) {
+    .conteudo { width: calc(100% - 30px); }
+    .cabecalho_secao { align-items: stretch; flex-direction: column; }
+    .busca { width: 100%; }
+    .curso { grid-template-columns: 45px 1fr; gap: 8px 15px; align-items: start; }
+    .curso_numero { font-size: 36px; }
+    .curso > a { grid-column: 2; }
+    .areas_lista { grid-template-columns: 1fr; }
+    .duvida { align-items: flex-start; flex-direction: column; }
+    .contato_topo h1 { font-size: 43px; }
+    .rodape_conteudo { display: block; }
+    .rodape p + p { margin-top: 8px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

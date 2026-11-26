@@ -3,64 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conheça as páginas da GHS - Cursos.">
+    <meta name="description" content="Entre em contato com a GHS - Cursos.">
     <link rel="icon" href="img/escola.png" type="image/png">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/catalogo.css">
     <title>GHS - Contatos</title>
 </head>
 <body>
-    <!-- Cabeçalho e menu -->
-    <div class="topo">
-        <header class="header">
-            <div class="conteudo header_conteudo">
-                <a class="logo" href="index.html">GHS - Cursos</a>
-                <button class="menu_botao" id="btn-menu" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">☰</button>
-                <nav class="nav" id="nav" aria-label="Menu principal">
-                    <ul class="menu">
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="curso.html">Cursos</a></li>
-                        <li><a href="professores.html">Professores</a></li>
-                        <li><a href="contatos.html" class="select" aria-current="page">Contatos</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <div class="topo_texto conteudo">
-            <h1>Entre em Contato</h1>
-            <p>Tire suas dúvidas sobre os cursos.</p>
+    <!-- Cabeçalho do site -->
+    <header class="cabecalho">
+        <div class="conteudo cabecalho_conteudo">
+            <a class="logo" href="index.html">GHS - Cursos</a>
+            <button class="menu_botao" id="btn-menu" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">☰</button>
+            <nav class="nav" id="nav" aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="curso.html">Cursos</a></li>
+                    <li><a href="professores.html">Professores</a></li>
+                    <li><a href="contatos.html" class="atual" aria-current="page">Contatos</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
-
+    </header>
     <main>
-
-        <div class="conteudo">
-            <section class="secao">
-                <h2 class="section_titulo">Fale com a gente</h2>
-                <div class="contato">
-                    <div class="contato_dados">
-                        <h3>Estamos aqui para ajudar</h3>
-                        <p>Para saber mais sobre as aulas, envie um e-mail ou ligue para a escola.</p>
-                        <p><strong>E-mail:</strong><br><a href="mailto:teste@hotmail.com">teste@hotmail.com</a></p>
-                        <p><strong>Telefone:</strong><br><a href="tel:+5511973275288">(11) 97327-5288</a></p>
-                        <a class="link_claro" href="mailto:teste@hotmail.com?subject=Informações%20sobre%20os%20cursos">Enviar e-mail</a>
-                    </div>
-                    <div class="contato_imagem">
-                        <img src="img/contato.jpg" alt="Ilustração com um envelope e a palavra contatos">
-                        <p>O botão abre o aplicativo de e-mail do seu dispositivo.</p>
-                    </div>
-                </div>
-                <p class="aviso">Os dados de contato são exemplos deste projeto. Confirme-os antes de enviar uma mensagem.</p>
-            </section>
-        </div>
+        <!-- Página de contatos -->
+        <section class="contato_topo">
+            <div class="conteudo"><p class="marcador">GHS - CURSOS</p><h1>Entre em contato</h1><p>Tem alguma dúvida sobre as aulas? Fale com a gente.</p></div>
+        </section>
+        <section class="conteudo contato_conteudo">
+            <div class="contato_info">
+                <h2>Fale com a gente</h2>
+                <p>Para saber mais sobre os cursos, você pode enviar um e-mail ou ligar.</p>
+                <div class="dados"><strong>E-mail</strong><a href="mailto:teste@hotmail.com">teste@hotmail.com</a></div>
+                <div class="dados"><strong>Telefone</strong><a href="tel:+5511973275288">(11) 97327-5288</a></div>
+                <a class="botao botao_escuro" id="email-contato" href="mailto:teste@hotmail.com?subject=Informa%C3%A7%C3%B5es%20sobre%20os%20cursos">Enviar e-mail</a>
+                <p class="aviso">O botão abre o aplicativo de e-mail do seu dispositivo. Os dados de contato são exemplos deste projeto; confirme-os antes de enviar uma mensagem.</p>
+            </div>
+            <div class="contato_arte"><img src="img/contato.jpg" alt="Ilustração com um envelope e a palavra contatos"></div>
+        </section>
     </main>
-
     <!-- Rodapé -->
-    <footer class="footer">
-        <div class="conteudo">
-            <p><a href="index.html">Início</a> | <a href="curso.html">Cursos</a> | <a href="professores.html">Professores</a> | <a href="contatos.html">Contatos</a></p>
+    <footer class="rodape">
+        <div class="conteudo rodape_conteudo">
             <p>Guilherme Feitosa - GHS Cursos</p>
+            <p><a href="index.html">Início</a> | <a href="curso.html">Cursos</a> | <a href="professores.html">Professores</a> | <a href="contatos.html">Contatos</a></p>
         </div>
     </footer>
     <script src="js/main.js"></script>
+    <script src="js/contato.js"></script>
 </body>
 </html>

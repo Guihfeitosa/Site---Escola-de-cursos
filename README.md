@@ -14,8 +14,11 @@ Abra o arquivo `index.html` no navegador. Use o menu para acessar as páginas de
 - `contatos.html`: formas de contato.
 - `usuarios.html`: endereço antigo que leva à página de professores.
 - `css/inicio.css`: estilos da página inicial.
-- `css/styles.css`: estilos das outras páginas.
+- `css/styles.css`: estilos da página de professores.
+- `css/catalogo.css`: estilos das páginas de cursos e contatos.
 - `js/main.js`: funcionamento do menu.
-- `img/`: imagens que já estavam no projeto.
+- `js/cursos.js`: busca de cursos.
+- `js/contato.js`: assunto do e-mail de contato.
+- `img/`: imagens do projeto. A imagem `laboratorio-cursos.jpg` foi gerada para ilustrar a página de cursos; não é uma foto da escola.
 
 Os contatos da página são exemplos do projeto e devem ser confirmados antes do uso. O link de e-mail abre o aplicativo de e-mail do dispositivo; o site não envia mensagens por conta própria.
