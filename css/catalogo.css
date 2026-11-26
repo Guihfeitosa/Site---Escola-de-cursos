@@ -34,7 +34,6 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
 .abertura_texto > p:not(.chamada) { max-width: 42ch; margin-bottom: 25px; }
 .abertura_imagem { position: relative; min-width: 0; margin: 0; }
 .abertura_imagem img { width: 100%; height: 100%; position: absolute; object-fit: cover; }
-.abertura_imagem figcaption { position: absolute; bottom: 0; right: 0; color: #fff; background: rgba(0, 0, 0, .75); font-size: 12px; padding: 4px 8px; }
 .secao_catalogo { padding: 65px 0; }
 .cabecalho_secao { display: flex; justify-content: space-between; align-items: end; gap: 30px; }
 .cabecalho_secao h2, .areas h2, .duvida h2 { font-size: 42px; margin: 0 0 10px; }
@@ -46,8 +45,8 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
 .resultado { font-size: 14px; margin: 12px 0 0; }
 .resultado:empty { display: none; }
 .lista_cursos { margin-top: 25px; border-top: 2px solid #333; }
-.curso { display: grid; grid-template-columns: 80px 1fr auto; gap: 24px; align-items: center; padding: 24px 0; border-bottom: 1px solid #ccc; }
-.curso_numero { font: 48px 'Yanone Kaffeesatz', Arial, sans-serif; color: #b96b00; }
+.curso { display: grid; grid-template-columns: 128px minmax(0, 1fr) auto; gap: 24px; align-items: center; padding: 24px 0; border-bottom: 1px solid #ccc; }
+.curso_imagem { width: 128px; height: 128px; object-fit: contain; background: #f3f2ef; }
 .curso_tipo { font-size: 11px; font-weight: bold; letter-spacing: 1px; color: #765000; margin: 0 0 6px; }
 .curso h3 { font-size: 32px; margin: 0 0 6px; }
 .curso_texto > p:last-child { max-width: 65ch; margin: 0; }
@@ -98,9 +97,9 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
     .conteudo { width: calc(100% - 30px); }
     .cabecalho_secao { align-items: stretch; flex-direction: column; }
     .busca { width: 100%; }
-    .curso { grid-template-columns: 45px 1fr; gap: 8px 15px; align-items: start; }
-    .curso_numero { font-size: 36px; }
-    .curso > a { grid-column: 2; }
+    .curso { grid-template-columns: 72px minmax(0, 1fr); gap: 8px 15px; align-items: start; }
+    .curso_imagem { width: 72px; height: 72px; }
+    .curso > a { grid-column: 2; white-space: normal; }
     .areas_lista { grid-template-columns: 1fr; }
     .duvida { align-items: flex-start; flex-direction: column; }
     .contato_topo h1 { font-size: 43px; }
