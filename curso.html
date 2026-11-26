@@ -1,28 +1,44 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
-
+<html lang="pt-BR">
 <head>
-    <!-- Configuração de conjunto de caracteres para suporte  e acentos e caracteres essenciais -->
     <meta charset="UTF-8">
-
-    <!-- Configuração de viewport para responsividade em dispositivos móveis -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,
-    minimum-scale = 1">
-
-    <!-- Palavras-chave e descrição para otimização de motores de busca (SEO) -->
-    <meta name="keywords" content="curso de programação web, curso programador web, programar web, programação web">
-    <meta name="description" content="Aprender programação, Aprenda programação com Profesor Guilherme H. S. Feitosa">
-
-    <!-- Favicon (icone que aparece na aba do navegador) -->
-    <link rel="shortcut icon" type="image/x-icon" href="./imagens/escola.png">
-
-    <!-- Importação de folha de estilos (CSS principal) -->
-    <link href="css/styles.css" rel="stylesheet" type="text/css" />
-
-    <!-- Título da página exibido no navegador -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça os cursos de tecnologia da GHS - Cursos.">
+    <link rel="icon" href="img/escola.png" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
     <title>GHS - Cursos</title>
 </head>
 <body>
-    
+    <!-- Cabeçalho e menu -->
+    <header class="header">
+        <div class="conteudo header_conteudo">
+            <a class="logo" href="index.html"><img src="img/escola.png" alt=""><span>GHS <small>CURSOS</small></span></a>
+            <button class="menu_botao" id="btn-menu" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">☰</button>
+            <nav class="nav" id="nav" aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="curso.html" class="ativo" aria-current="page">Cursos</a></li>
+                    <li><a href="professores.html">Professores</a></li>
+                    <li><a href="contatos.html">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="pagina-topo"><div class="conteudo"><p class="destaque">APRENDA COM A GENTE</p><h1>Nossos cursos</h1><p>Conheça algumas das áreas de tecnologia que você pode explorar.</p></div></section>
+        <section class="conteudo secao">
+            <div class="secao_cabecalho"><div><p class="destaque">CURSOS EM DESTAQUE</p><h2>Comece a aprender</h2></div></div>
+            <div class="grade grade-tres">
+                <article class="cartao" id="php"><img src="img/php.jpg" alt="Ilustração sobre PHP 7"><div class="cartao_texto"><span class="etiqueta">PROGRAMAÇÃO</span><h3>Curso de PHP 7</h3><p>Aprenda os fundamentos do PHP e conheça sua aplicação no desenvolvimento web com MVC.</p><a class="link" href="contatos.html">Pedir informações →</a></div></article>
+                <article class="cartao" id="asp"><img src="img/asp.jpg" alt="Ilustração sobre ASP.NET"><div class="cartao_texto"><span class="etiqueta">DESENVOLVIMENTO</span><h3>ASP.NET MVC</h3><p>Conheça a estrutura MVC e seus usos na criação de aplicações web com ASP.NET.</p><a class="link" href="contatos.html">Pedir informações →</a></div></article>
+                <article class="cartao" id="web"><img src="img/web.jpg" alt="Ilustração sobre programação web"><div class="cartao_texto"><span class="etiqueta">WEB</span><h3>Programação web</h3><p>Conheça HTML, CSS e outras tecnologias usadas para criar páginas e sistemas web.</p><a class="link" href="contatos.html">Pedir informações →</a></div></article>
+            </div>
+        </section>
+        <section class="fundo-claro secao" id="categorias"><div class="conteudo"><p class="destaque">OUTRAS ÁREAS</p><h2>Explore por categoria</h2><div class="grade grade-quatro lista-areas"><div><h3>Web design</h3><p>Criação e visual de sites.</p></div><div><h3>Jogos</h3><p>Desenvolvimento de jogos 2D e 3D.</p></div><div><h3>Aplicativos</h3><p>Ideias e ferramentas para dispositivos móveis.</p></div><div><h3>Redes e servidores</h3><p>Conceitos de redes e servidores.</p></div></div></div></section>
+    </main>
+    <!-- Rodapé do site -->
+    <footer class="footer"><div class="conteudo footer_conteudo"><div><strong>GHS - Cursos</strong><p>Aprender é o primeiro passo.</p></div><div><a href="curso.html">Cursos</a><a href="professores.html">Professores</a><a href="contatos.html">Contatos</a></div><p>Guilherme Feitosa · GHS - Cursos</p></div></footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
