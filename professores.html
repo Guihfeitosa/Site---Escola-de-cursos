@@ -6,7 +6,7 @@
     <meta name="description" content="Conheça o professor apresentado no site GHS - Cursos.">
     <link rel="icon" href="img/escola.png" type="image/png">
     <link rel="stylesheet" href="css/catalogo.css?v=2">
-    <link rel="stylesheet" href="css/professores.css">
+    <link rel="stylesheet" href="css/professores.css?v=2">
     <title>GHS - Professores</title>
 </head>
 <body>
@@ -27,42 +27,65 @@
     </header>
 
     <main>
-        <!-- Apresentação da página -->
-        <section class="professores_topo">
-            <div class="conteudo">
-                <p class="marcador">GHS - CURSOS</p>
-                <h1>Nossos professores</h1>
-                <p>Conheça quem faz parte do nosso site.</p>
-            </div>
-        </section>
-
-        <!-- Foto e informações do professor -->
-        <section class="conteudo perfil">
-            <div class="perfil_foto">
-                <img src="img/professor-guilherme.png" alt="Foto de Guilherme H. S. Feitosa" width="404" height="404">
-            </div>
-            <div class="perfil_texto">
-                <p class="marcador">PROFESSOR</p>
-                <h2>Guilherme H. S. Feitosa</h2>
-                <p>Professor apresentado no site, com foco no ensino de programação e tecnologia.</p>
-                <p>Conheça os cursos disponíveis e, se tiver alguma dúvida, entre em contato.</p>
-                <div class="perfil_links">
-                    <a class="botao botao_escuro" href="curso.html">Ver os cursos</a>
-                    <a class="perfil_contato" href="contatos.html">Entre em contato</a>
+        <!-- Apresentação do professor -->
+        <section class="apresentacao">
+            <div class="conteudo apresentacao_conteudo">
+                <div class="apresentacao_texto">
+                    <p class="marcador">GHS - CURSOS / PROFESSORES</p>
+                    <h1>Conheça o professor</h1>
+                    <p class="nome">Guilherme H. S. Feitosa</p>
+                    <p>Programação e tecnologia para quem quer aprender a criar para a web.</p>
+                    <a class="botao botao_escuro" href="#sobre">Conheça mais</a>
+                </div>
+                <div class="retrato">
+                    <img src="img/professor-guilherme.png" alt="Foto de Guilherme H. S. Feitosa" width="404" height="404">
+                    <div class="retrato_legenda"><strong>Guilherme Feitosa</strong><span>Professor</span></div>
                 </div>
             </div>
         </section>
 
-        <!-- Áreas disponíveis no site -->
-        <section class="areas_professor">
+        <!-- Informações e assuntos do site -->
+        <section class="conteudo sobre" id="sobre">
+            <div class="sobre_titulo">
+                <p class="marcador">QUEM ENSINA</p>
+                <h2>Sobre o professor</h2>
+            </div>
+            <div class="sobre_texto">
+                <p>Guilherme H. S. Feitosa é o professor apresentado na GHS - Cursos, com foco em programação e tecnologia.</p>
+                <p>No site, você encontra conteúdos sobre desenvolvimento web, linguagens de programação e outras áreas da informática.</p>
+                <a href="contatos.html">Fale com a escola</a>
+            </div>
+        </section>
+
+        <!-- Cursos disponíveis -->
+        <section class="cursos_professor">
             <div class="conteudo">
-                <h2>Áreas para aprender</h2>
-                <p>Confira alguns dos assuntos apresentados nos cursos.</p>
-                <div class="areas_professor_lista">
-                    <a href="curso.html#php"><strong>PHP 7</strong><span>Programação para a web</span></a>
-                    <a href="curso.html#asp"><strong>ASP.NET MVC</strong><span>Aplicações web</span></a>
-                    <a href="curso.html#web"><strong>Programação Web</strong><span>HTML, CSS e mais</span></a>
+                <div class="cursos_cabecalho">
+                    <div><p class="marcador">APRENDA NO SEU RITMO</p><h2>Explore os cursos</h2><p>Conheça algumas das áreas apresentadas no site.</p></div>
+                    <a href="curso.html">Ver todos os cursos</a>
                 </div>
+                <div class="cursos_lista">
+                    <article class="curso_destaque">
+                        <img src="img/php.jpg" alt="Ilustração do curso de PHP 7" width="960" height="879">
+                        <div><h3>PHP 7</h3><p>Programação para a web.</p><a href="curso.html#php">Conhecer o curso</a></div>
+                    </article>
+                    <article class="curso_destaque">
+                        <img src="img/asp.jpg" alt="Ilustração do curso de ASP.NET MVC" width="960" height="879">
+                        <div><h3>ASP.NET MVC</h3><p>Desenvolvimento de aplicações web.</p><a href="curso.html#asp">Conhecer o curso</a></div>
+                    </article>
+                    <article class="curso_destaque">
+                        <img src="img/web.jpg" alt="Ilustração do curso de programação web" width="960" height="879">
+                        <div><h3>Programação Web</h3><p>HTML, CSS e outras ferramentas.</p><a href="curso.html#web">Conhecer o curso</a></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Link para contato -->
+        <section class="contato_professor">
+            <div class="conteudo contato_professor_conteudo">
+                <div><h2>Quer saber mais sobre as aulas?</h2><p>Entre em contato para tirar suas dúvidas sobre os cursos.</p></div>
+                <a class="botao contato_botao" href="contatos.html">Entrar em contato</a>
             </div>
         </section>
     </main>
