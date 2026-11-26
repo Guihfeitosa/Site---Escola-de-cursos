@@ -13,7 +13,8 @@ Abra o arquivo `index.html` no navegador. Use o menu para acessar as páginas de
 - `professores.html`: apresentação do professor.
 - `contatos.html`: formas de contato.
 - `usuarios.html`: endereço antigo que leva à página de professores.
-- `css/styles.css`: estilos do site.
+- `css/inicio.css`: estilos da página inicial.
+- `css/styles.css`: estilos das outras páginas.
 - `js/main.js`: funcionamento do menu.
 - `img/`: imagens que já estavam no projeto.
 
